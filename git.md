@@ -71,6 +71,6 @@ example:
     
         ~/.gitignore_global 
     
-    and add some rules to it. To add this to your config, run
+>   and add some rules to it. To add this to your config, run
     
         $ git config --global core.excludesfile ~/.gitignore_global
