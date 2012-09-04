@@ -10,4 +10,5 @@ Convierte código de node.js a código que se ejecuta en el navegador
 
 # uso
     
-    $ browserify client.js -o public/javascripts/client.js
+    $ browserify client.js |
+        uglify > public/javascripts/client.min.js

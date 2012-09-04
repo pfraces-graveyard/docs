@@ -8,3 +8,7 @@ rpc para node.js y navegadores
 
 *   llama a funciones remotamente
 *   permite pasar callbacks
+
+# instalación
+
+    $ npm install dnode
