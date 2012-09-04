@@ -25,11 +25,11 @@ example:
 
     $ git push origin master
 
-# show *working directory* status
+# show _working directory_ status
 
     $ git status
 
-# show differences between **working directory** and **stage**
+# show differences between _working directory_ and _stage_
 
     $ git diff <file>
 
@@ -64,13 +64,13 @@ example:
   file that was already tracked before a rule was added to this file to 
   ignore it. In such a case the file must be un-tracked, usually with 
 
-      $ git rm --cached filename
+>     $ git rm --cached filename
  
-  A global **.gitignore** file can also be used by adding one to your global
+> A global **.gitignore** file can also be used by adding one to your global
   git config. For example, you might create the file
  
-      ~/.gitignore_global 
+>     ~/.gitignore_global 
  
-  and add some rules to it. To add this to your config, run
+> and add some rules to it. To add this to your config, run
  
-      $ git config --global core.excludesfile ~/.gitignore_global
+>     $ git config --global core.excludesfile ~/.gitignore_global
