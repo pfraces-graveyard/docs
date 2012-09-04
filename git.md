@@ -60,17 +60,17 @@ example:
 [https://help.github.com/articles/ignoring-files]()
 
 >   If you create a file in your repo named **.gitignore** git will use its 
->   rules when looking at files to commit. Note that git will not ignore a 
->   file that was already tracked before a rule was added to this file to 
->   ignore it. In such a case the file must be un-tracked, usually with 
->   
->       $ git rm --cached filename
->
+    rules when looking at files to commit. Note that git will not ignore a 
+    file that was already tracked before a rule was added to this file to 
+    ignore it. In such a case the file must be un-tracked, usually with 
+
+>     $ git rm --cached filename
+
 >   A global **.gitignore** file can also be used by adding one to your global
->   git config. For example, you might create the file
->   
->       ~/.gitignore_global 
->   
+    git config. For example, you might create the file
+
+>     ~/.gitignore_global 
+
 >   and add some rules to it. To add this to your config, run
->   
->       $ git config --global core.excludesfile ~/.gitignore_global
+
+>     $ git config --global core.excludesfile ~/.gitignore_global
