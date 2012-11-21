@@ -16,17 +16,17 @@ Lenguaje de markup usado para documentar
 
 # links
 
-    * [http://url.com]()
-    * [http://url.com](url)
+    * http://url.com
+    * [url](http://url.com)
 
-* [http://url.com]()
-* [http://url.com](url)
+* http://url.com
+* [url](http://url.com)
 
 # listas
 
-* item A
-* item B
-    * item anidado
+    * item A
+    * item B
+        * item anidado
 
 * item A
 * item B
@@ -44,9 +44,9 @@ _cursivas_
 
 # bloques preformateados
 
-* Para poner ejemplos de código o de alguna sintaxis
-* Markdown no interpreta su contenido
-* Simplemente se debe indentar el texto preformateado con 4 espacios
+Para poner ejemplos de código o de alguna sintaxis, los cuales no serán
+interpretados por Markdown, simplemente se debe indentar el texto 
+preformateado con 4 espacios
 
     # titulo
 
