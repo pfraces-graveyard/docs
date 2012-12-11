@@ -31,11 +31,31 @@ Track untracked files and add modifications to the stage
 
     $ git add .
 
+Este comando añadirá **todos** los ficheros nuevos (no ignorados) y todos los 
+modificados desde el último commit al stage, lo que significa que se subirán
+al repositorio local con el siguiente commit
+
+Se pueden elegir parte de los archivos nuevos o modificados para subir con el
+siguiente commit, dejándo los otros pendientes. Para conseguirlo, se deben
+especificar los archivos que se desean añadir al stage individualmente
+
+    $ git add path/to/file path/to/anotherfile
+
 ### Commit changes to local repository
 
 Upload staged modifications and new tracked files to local repo
 
-    $ git commit -a
+    $ git commit
+
+Se abrirá vim mostrando la parte de `git status` que afecta al commit, es
+decir, las modificaciones añadidas al stage mediante `git add`
+
+Se debe introducir el mensaje de commit a partir de la 1era linea, dejando
+el log de modificaciones por debajo
+
+Se puede omitir vim pasando el mensaje directamente por linea de comandos
+
+    $ git commit -m 'mensaje de commit'
 
 ## Sync repos
 
