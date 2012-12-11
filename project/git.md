@@ -2,31 +2,62 @@
 
 Distributed version control system
 
-# Prepare environment
+# General workflow
+
+## Check status
+
+### Show working directory status
+
+    $ git status
+
+`git status` muestra mucha información útil:
+
+* ficheros no versionados
+* ficheros versionados con modificaciones pendientes de versionar
+* ficheros renombrados o eliminados
+
+Además en cada sección indica los comandos que se deben usar para configurar el
+siguiente commit
+
+### Show differences between working directory and stage
+
+    $ git diff <file>
+
+## Commit
+
+### Prepare stage
+
+Track untracked files and add modifications to the stage
+
+    $ git add .
+
+### Commit changes to local repository
+
+Upload staged modifications and new tracked files to local repo
+
+    $ git commit -a
+
+## Sync repos
+
+### Upload local modification to a remote repo
+
+    $ git push <remote> <branch>
+
+Example:
+
+    $ git push origin master
+
+### Download modifications from a remote repo
+
+    $ git pull <remote>
+
+# Configuration
+
+## Prepare environment
 
     $ git config --global core.editor "vim"
     $ git config --global user.email "you@example.com"
     $ git config --global user.name "Your Name"
-
-## External tools
-
-Ver diferencias con meld
-
-### Instalar meld
-
-    $ sudo pacman -S meld pygtksourceview2
-
-### Cambiar el programa que usa git para mostrar diferencias
-
-`/usr/local/bin/gitdiff`
-
-    #!/bin/bash
-    /usr/bin/meld "$2" "$5" 2> /dev/null
-
-Hacer ejecutable y configurar git
-
-    $ sudo chmod +x /usr/local/bin/gitdiff
-    $ git config --global diff.external gitdiff
 
 ## Overriding settings in individual repos
 
@@ -44,6 +75,29 @@ By default git will cache your password for 15 minutes. You can change this if
 you like (setting is in seconds).
 
     $ git config --global credential.helper "cache --timeout=3600"
+
+## External tools
+
+### meld
+
+Ver diferencias con meld
+
+#### Instalar meld
+
+    $ sudo pacman -S meld pygtksourceview2
+
+#### Cambiar el programa que usa git para mostrar diferencias
+
+`/usr/local/bin/gitdiff`
+
+    #!/bin/bash
+    /usr/bin/meld "$2" "$5" 2> /dev/null
+
+Hacer ejecutable y configurar git
+
+    $ sudo chmod +x /usr/local/bin/gitdiff
+    $ git config --global diff.external gitdiff
+
 
 # Creating a new repository
 
@@ -68,53 +122,6 @@ Tested on:
 
 * github
 * bitbucket
-
-# Versioning
-
-## Check status
-
-### Show working directory status
-
-    $ git status
-
-`git status` muestra mucha información útil:
-
-* ficheros no versionados
-* ficheros versionados con modificaciones pendientes de versionar
-* ficheros renombrados o eliminados
-
-Además en cada sección indica los comandos que se deben usar para configurar el
-siguiente commit
-
-### Show differences between working directory and stage
-
-    $ git diff <file>
-
-## Prepare commit
-
-Track untracked files and add modifications to the stage
-
-    $ git add .
-
-## Commit changes to local repository
-
-Upload staged modifications and new tracked files to local repo
-
-    $ git commit -a
-
-# Syncing repositories
-
-## Upload local modification to a remote repo
-
-    $ git push <remote> <branch>
-
-Example:
-
-    $ git push origin master
-
-## Download modifications from a remote repo
-
-    $ git pull <remote>
 
 # Remotes
 
