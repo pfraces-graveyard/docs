@@ -11,4 +11,4 @@ rpc para node.js y navegadores
 
 # instalación
 
-    $ npm install dnode
+    $ npm install dnode shoe domready

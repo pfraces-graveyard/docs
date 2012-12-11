@@ -10,7 +10,7 @@ Primero se debe instalar de forma global
 
 Luego, desde la carpeta raíz de cada proyecto en el que se quiera usar express
 
-    $ express -css stylus
+    $ express --css stylus
     $ npm install
 
 Esto creará una aplicación express por defecto con jade y stylus
