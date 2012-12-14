@@ -1,0 +1,128 @@
+# informix client sdk
+
+## descargar
+
+*   fuente
+
+    *   [http://www14.software.ibm.com/webapp/download/search.jsp?rs=ifxdl]()
+
+*   cambiar el filtro de OS a "linux x86"
+*   descargar
+
+## instalar
+
+ir a directorio de descargas
+
+    $ mkdir csdk
+    $ cd csdk
+    $ tar xf ../clientsdk<tab>
+    $ sudo ./installclientsdk
+
+*   default install folder: /opt/IBM/informix
+*   como solo quiero el odbc driver, desmarco todo excepto 9
+*   GLS es necesario, asi que marco 12
+
+una vez instalado se puede instalar el directorio de instalacion
+
+    $ cd ..
+    $ rm -r csdk
+
+# unixodbc
+
+## instalar
+
+    $ pacman -S unixodbc
+
+## configurar
+
+*   info
+
+    *   [http://www.unixodbc.org/doc/informix.html]()
+
+*   $HOME/.bashrc:
+
+        export INFORMIXDIR=/opt/IBM/informix
+        export ODBCINI=/etc/odbc.ini
+
+*   /etc/hosts
+
+        <db_server_ip> <db_server_hostname>
+
+*   $INFORMIXDIR/etc/sqlhosts
+
+        <service_name> <conn_type> <db_server_hostname> <service_app>
+
+*   /etc/ld.so.conf.d/informix.conf
+
+        /opt/IBM/informix/lib
+        /opt/IBM/informix/lib/cli
+        /opt/IBM/informix/lib/esql
+
+*   reconfigurar loader
+
+        $ sudo ldconfig
+
+*   /etc/odbcinst.ini
+
+        [Informix]
+        Description=Informix SE
+        Driver=/opt/IBM/informix/lib/cli/libifcli.so
+        APILevel=1
+        ConnectFunctions=YYY
+        DriverODBCVer=03.00
+        FileUsage=0
+        SQLLevel=1
+        smProcessPerConnect=Y
+
+*   /etc/odbc.ini
+
+        [<odbc_name>]
+        Driver=Informix
+        Server=<service_name>
+        Database=<db_path>/<db_name>
+        LogonID=<user>
+        Pwd=<pass>
+        CLIENT_LOCALE=en_us.cp1252
+        DB_LOCALE=en_us.cp1252
+        TRANSLATIONDLL=/opt/IBM/informix/lib/esql/igo4a304.so
+
+*   /etc/services
+
+    *   eliminar las lineas de sqlexec
+    *   hacer entrada en 1525
+
+            <service_name>         <port>/tcp    # informix se
+
+# node-odbc
+
+*   se prohibe la instalacion de modulos excepto para super user
+
+        $ npm config set unsafe-perm false
+
+*   instalar el modulo desde el directorio en que se usara  
+    [http://blog.nodejs.org/2011/03/23/npm-1-0-global-vs-local-installation/]()
+
+        $ npm install odbc
+        $ cd node_modules/odbc
+        $ ln -s build/Release/odbc_bindings.node .
+
+# tutorial source
+
+[http://blogabill.billiouw.com/nodejs-node-odbc-module-with-native-sql-server-driver-for-linux-2/]()
+
+# odbc.js
+
+    #!/usr/bin/node
+
+    var sys = require("util"),
+        odbc = require("odbc"),
+        db = new odbc.Database(),
+        syntax = "SELECT * FROM table";
+
+    db.open("DSN=<odbc_name>", function (err) {
+        db.query(syntax, function (err, rows, moreResultSets) {
+        console.log(rows[0].YourFieldName);
+        sys.debug(sys.inspect(rows));
+        db.close(function () {});
+        });
+    });
