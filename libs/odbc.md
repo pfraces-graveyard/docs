@@ -48,9 +48,17 @@ una vez instalado se puede instalar el directorio de instalacion
 
         <db_server_ip> <db_server_hostname>
 
+    Ej:
+
+        192.168.0.3 SrvLinux
+
 *   $INFORMIXDIR/etc/sqlhosts
 
         <service_name> <conn_type> <db_server_hostname> <service_app>
+
+    Ej:
+
+        sr_linux sesoctcp SrvLinux sqlexec
 
 *   /etc/ld.so.conf.d/informix.conf
 
@@ -86,6 +94,18 @@ una vez instalado se puede instalar el directorio de instalacion
         DB_LOCALE=en_us.cp1252
         TRANSLATIONDLL=/opt/IBM/informix/lib/esql/igo4a304.so
 
+    Ej: (frutinter)
+
+        [frutinter]
+        Driver=Informix
+        Server=sr_linux
+        Database=/disk2/primer/tmp/reset/frutinter/fruita
+        LogonID=reset
+        pwd=<pass de reset en la 0.3>
+        CLIENT_LOCALE=en_us.cp1252
+        DB_LOCALE=en_us.cp1252
+        TRANSLATIONDLL=/opt/IBM/informix/lib/esql/igo4a304.so
+
 *   /etc/services
 
     *   eliminar las lineas de sqlexec
@@ -93,18 +113,15 @@ una vez instalado se puede instalar el directorio de instalacion
 
             <service_name>         <port>/tcp    # informix se
 
+        Ej:
+
+            sqlexec 1525/tcp # informix se
+
 # node-odbc
 
-*   se prohibe la instalacion de modulos excepto para super user
-
-        $ npm config set unsafe-perm false
-
-*   instalar el modulo desde el directorio en que se usara  
-    [http://blog.nodejs.org/2011/03/23/npm-1-0-global-vs-local-installation/]()
-
-        $ npm install odbc
-        $ cd node_modules/odbc
-        $ ln -s build/Release/odbc_bindings.node .
+    $ npm install odbc
+    $ cd node_modules/odbc
+    $ ln -s build/Release/odbc_bindings.node .
 
 # tutorial source
 
