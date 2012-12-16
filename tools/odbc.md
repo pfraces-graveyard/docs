@@ -32,10 +32,6 @@ ir a directorio de descargas
     $ tar xf ../clientsdk<tab>
     $ sudo ./installclientsdk
 
-si no hay espacio en /tmp se debe apuntar a un sitio con espacio
-
-    $ mkdir $HOME/tmp
-    
 *   default install folder: /opt/IBM/informix
 *   como solo quiero el odbc driver, desmarco todo excepto 9
 *   GLS es necesario, asi que marco 12
@@ -45,6 +41,17 @@ una vez instalado se puede instalar el directorio de instalacion
     $ cd ..
     $ rm -r csdk
 
+si hay errores con el instalador, se puede recurrir al método manual:
+
+1.  Obtener una copia del tar con el directorio ya instalado (hay una copia en
+    el ftp de la dmz, en el directorio /pau)
+
+2.  Descomprimir el paquete
+
+        $ sudo mkdir /opt/IBM
+        $ cd /opt/IBM
+        $ sudo tar xzf /path/to/informix-client.tar.gz
+    
 # unixodbc
 
 ## instalar
