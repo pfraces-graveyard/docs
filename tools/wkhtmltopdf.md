@@ -11,6 +11,14 @@ Se usa para generar facturas en pdf:
 **Nota:** phantomjs hace lo mismo y ofrece mayor control, es conveniente
 tenerlo en cuenta para futuras versiones
 
+# Modo de empleo
+
+    $ wkhtmltopdf www.web.com output.pdf
+
+Usando un script propio (ver abajo) y atacando a servidor local, puerto 3000
+
+    $ html2pdf localhost:3000 output.pdf
+
 # Instalar
 
 ## Archlinux
@@ -34,3 +42,21 @@ Dá errores (Qpixmap) si no se tiene X levantado, pero aún así, el pdf se gene
 correctamente
 
     $ ./wkhtmltopdf www.google.com output.pdf
+
+# Requiere X11
+
+Para ejecutarlo desde ssh o scripts se debe hacer un script
+
+`/usr/local/bin/html2pdf` 
+
+    xvfb-run -a -s "-screen 0 640x480x16" wkhtmltopdf $*
+
+E instalar los paquetes requeridos
+
+    $ sudo pacman -S xorg-server-xvfb xorg-xauth
+
+# Fuentes
+
+Instalamos una fuente bonita
+
+    $ sudo pacman -S ttf-dejavu
