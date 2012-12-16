@@ -10,3 +10,17 @@
   terminales que usan el 80º caracter como caracter de control, se coloreará a
   partir de 79 caracteres asegurando así la correcta visualización en cualquier
   medio
+
+# pathogen.vim
+
+Instalador de plugins
+
+    $ mkdir -p ~/.vim/autoload ~/.vim/bundle
+    $ curl -Sso ~/.vim/autoload/pathogen.vim \
+      https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+
+`~/.vimrc`
+
+  call pathogen#infect()
+  syntax on
+  filetype plugin indent on

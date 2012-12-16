@@ -9,3 +9,10 @@ Plantillas para generar html
 _Se instala automáticamente con la aplicación por defecto de **express**_
 
 Ver **express.md**
+
+## syntax vim
+
+Con pathogen (ver doc `platform/vim.md`)
+
+    $ cd ~/.vim/bundle
+    $ git clone git://github.com/digitaltoad/vim-jade.git

@@ -11,6 +11,20 @@
 
 ## instalar
 
+requiere usuario y grupo "informix"
+
+    $ sudo groupadd informix
+    $ sudo useradd \
+      -g informix \
+      -G users,audio,lp,optical,storage,video,wheel,games,power,scanner \
+      -s /bin/bash \
+      -m \
+      informix
+
+requiere bc
+
+    $ sudo pacman -S bc
+
 ir a directorio de descargas
 
     $ mkdir csdk
@@ -18,6 +32,10 @@ ir a directorio de descargas
     $ tar xf ../clientsdk<tab>
     $ sudo ./installclientsdk
 
+si no hay espacio en /tmp se debe apuntar a un sitio con espacio
+
+    $ mkdir $HOME/tmp
+    
 *   default install folder: /opt/IBM/informix
 *   como solo quiero el odbc driver, desmarco todo excepto 9
 *   GLS es necesario, asi que marco 12
@@ -31,7 +49,13 @@ una vez instalado se puede instalar el directorio de instalacion
 
 ## instalar
 
-    $ pacman -S unixodbc
+### Archlinux
+
+    $ sudo pacman -S unixodbc
+
+### OpenSUSE
+
+    $ sudo zypper in unixodbc
 
 ## configurar
 

@@ -9,3 +9,10 @@ Plantillas para generar css
 _Se instala automáticamente con la aplicación por defecto de **express**_
 
 Ver **express.md**
+
+## syntax vim
+
+Con pathogen (ver `platform/vim.md`)
+
+    $ cd ~/.vim/bundle
+    $ git clone https://github.com/wavded/vim-stylus.git
