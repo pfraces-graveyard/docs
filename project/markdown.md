@@ -4,6 +4,13 @@ Lenguaje de markup usado para documentar
 
 [http://daringfireball.net/projects/markdown/syntax]()
 
+# vim syntax
+
+Con pathogen
+
+    $ cd ~/.vim/bundle
+    $ git clone https://github.com/plasticboy/vim-markdown.git
+
 # títulos
 
     # título
