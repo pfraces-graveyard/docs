@@ -12,7 +12,7 @@ Ver **express.md**
 
 ## syntax vim
 
-Con pathogen (ver doc `platform/vim.md`)
+Con pathogen
 
     $ cd ~/.vim/bundle
     $ git clone git://github.com/digitaltoad/vim-jade.git

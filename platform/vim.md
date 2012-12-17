@@ -20,6 +20,13 @@ Instalador de plugins
     syntax on
     filetype plugin indent on
 
+# plugins
+
+*   git clone https://github.com/plasticboy/vim-markdown.git
+*   git clone https://github.com/pangloss/vim-javascript.git
+*   git clone https://github.com/digitaltoad/vim-jade.git
+*   git clone https://github.com/wavded/vim-stylus.git
+
 # Highlight
 
 *   Colorear el exceso de 79 caracteres

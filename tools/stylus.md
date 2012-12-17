@@ -12,7 +12,7 @@ Ver **express.md**
 
 ## syntax vim
 
-Con pathogen (ver `platform/vim.md`)
+Con pathogen
 
     $ cd ~/.vim/bundle
     $ git clone https://github.com/wavded/vim-stylus.git
