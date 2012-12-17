@@ -19,6 +19,24 @@ Usando un script propio (ver abajo) y atacando a servidor local, puerto 3000
 
     $ html2pdf localhost:3000 output.pdf
 
+## Opciones
+
+    -h, --help                        Display help
+    -O, --orientation <orientation>   Set orientation to Landscape or Portrait
+                                      (default Portrait)
+    -s, --page-size <Size>            Set paper size to: A4, Letter, etc.
+                                      (default A4)
+    -q, --quiet                       Be less verbose
+
+## Opciones (más)
+
+    -H, --extended-help               Display more extensive help, detailing
+                                      less common command switches
+    -B, --margin-bottom <unitreal>    Set the page bottom margin (default 10mm)
+    -L, --margin-left <unitreal>      Set the page left margin (default 10mm)
+    -R, --margin-right <unitreal>     Set the page right margin (default 10mm)
+    -T, --margin-top <unitreal>       Set the page top margin (default 10mm)
+
 # Instalar
 
 ## Archlinux
