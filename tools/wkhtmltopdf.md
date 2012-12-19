@@ -41,25 +41,7 @@ Usando un script propio (ver abajo) y atacando a servidor local, puerto 3000
 
 ## Archlinux
 
-    $ pacman -S wkhtmltopdf
-
-### No recomendado
-
-> Reduced Functionality:
-    This version of wkhtmltopdf has been compiled against a QT version without
-    the wkhtmltopdf patches. Therefore some features are missing, if you need
-    these features please use the static version.
-
->   Currently the list of features only supported with patch QT includes:
-
->  * Printing more then one HTML document into a PDF file.
-   * Running without an X11 server.
-   * Adding a document outline to the PDF file.
-   * Adding headers and footers to the PDF file.
-   * Generating a table of contents.
-   * Adding links in the generated PDF file.
-   * Printing using the screen media-type.
-   * Disabling the smart shrink feature of webkit.
+    $ sudo packer -S --noconfirm wkhtmltopdf-static
 
 ## Método agnóstico a distribuciones
 
@@ -77,19 +59,14 @@ Binario provisto por los devs
 Dá errores (Qpixmap) si no se tiene X levantado, pero aún así, el pdf se genera
 correctamente
 
-    $ ./wkhtmltopdf www.google.com output.pdf
+    $ wkhtmltopdf www.google.com output.pdf
 
-# Requiere X11
+Para pedir una página a localhost es necesario poner `http` primero
 
-Para ejecutarlo desde ssh o scripts se debe hacer un script
+    $ wkhtmltopdf http://localhost:3000/N/1/2012 output.pdf
 
-`/usr/local/bin/html2pdf` 
-
-    xvfb-run -a -s "-screen 0 640x480x16" wkhtmltopdf $*
-
-E instalar los paquetes requeridos
-
-    $ sudo pacman -S xorg-server-xvfb xorg-xauth
+Y sobretodo **no olvidar el 2o parámetro** _output.pdf_ o como se le quiera
+llamar al pdf generado
 
 # Tipos de fuente
 
