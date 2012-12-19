@@ -43,9 +43,27 @@ Usando un script propio (ver abajo) y atacando a servidor local, puerto 3000
 
     $ pacman -S wkhtmltopdf
 
-## OpenSUSE
+### No recomendado
 
-Método agnóstico a distribuciones. Binario provisto por los devs
+> Reduced Functionality:
+    This version of wkhtmltopdf has been compiled against a QT version without
+    the wkhtmltopdf patches. Therefore some features are missing, if you need
+    these features please use the static version.
+
+>   Currently the list of features only supported with patch QT includes:
+
+>  * Printing more then one HTML document into a PDF file.
+   * Running without an X11 server.
+   * Adding a document outline to the PDF file.
+   * Adding headers and footers to the PDF file.
+   * Generating a table of contents.
+   * Adding links in the generated PDF file.
+   * Printing using the screen media-type.
+   * Disabling the smart shrink feature of webkit.
+
+## Método agnóstico a distribuciones
+
+Binario provisto por los devs
 
     $ cd $HOME
     $ mkdir wkhtmltopdf
@@ -73,7 +91,7 @@ E instalar los paquetes requeridos
 
     $ sudo pacman -S xorg-server-xvfb xorg-xauth
 
-# Fuentes
+# Tipos de fuente
 
 Instalamos una fuente bonita
 

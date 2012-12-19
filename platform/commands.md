@@ -35,17 +35,6 @@
     $ tar -h # entara el contenido de un enlace simbolico y no el enlace en si
     $ usermod -g users -G audio,disk,optical,power,storage,wheel pau
 
-gestión de usuarios
--------------------
-
-    # crea un usuario
-    $ sudo useradd -m -g users -G audio,disk,optical,wheel,power,storage \
-      -s /bin/bash archie
-    
-
-    # actualiza los grupos de un usuario existente
-    $ sudo usermod -g users -G audio,disk,optical,power,storage,wheel pau
-
 crear iso de un cd
 ------------------
     $ sudo wodim -v -speed=2 -dev='/dev/scd0' source.iso
