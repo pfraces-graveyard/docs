@@ -48,7 +48,7 @@ Qué se queda obsoleto, porqué y por que va a ser reemplazado
 
 # Configurar la red
 
-### [TODO]
+## [TODO]
 
 *   método manual
 *   rc.conf (o donde toque con systemd
@@ -62,7 +62,7 @@ Qué se queda obsoleto, porqué y por que va a ser reemplazado
 *   wpa
 *   dns
 
-# Actualización del sistema
+# Actualización inicial del sistema
 
 1.  Mirror mínimo:
 
@@ -97,10 +97,6 @@ Qué se queda obsoleto, porqué y por que va a ser reemplazado
 
         [root]$ pacman -Syu
 
-7.  Instalar herramientas básicas
-
-        [root]$ pacman -S --noconfirm sudo vim openssh
-
 # Gestión de usuarios
 
 *   Añadir usuario
@@ -121,13 +117,15 @@ Qué se queda obsoleto, porqué y por que va a ser reemplazado
 
         [root]$ userdel -r archie
 
-# Gestión de paquetes oficiales y de AUR
+# Instalar herramientas básicas
+
+    $ sudo pacman -S --noconfirm sudo vim openssh
 
 Instalar `packer`
 
     $ sudo pacman -S base-devel wget git jshon
     $ mkdir -p ~/build/packer/
     $ cd ~/build/packer/
-    $ wget http://aur.archlinux.org/packages/packer/PKGBUILD
+    $ wget https://aur.archlinux.org/packages/pa/packer/PKGBUILD 
     $ makepkg
     $ sudo pacman -U packer-*.pkg.tar.xz
