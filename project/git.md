@@ -173,6 +173,16 @@ and add some rules to it. To add this to your config, run
  
     $ git config --global core.excludesfile ~/.gitignore_global
 
+# Branching
+
+Create and switch to a new branch
+
+    $ git checkout -b 'newBranch'
+
+Switch to an existing branch
+
+    $ git checkout 'oldBranch'
+
 # Tagging
 
 Listing the available tags
@@ -183,6 +193,10 @@ Create annotated tag
 
     $ git tag -a v1.4 -m 'my version 1.4'
 
+Sharing tags
+
+    $ git push origin --tags
+
 See tag info
 
     $ git show v1.4
@@ -190,10 +204,6 @@ See tag info
 Tagging later
 
     $ git tag -a v1.2 9fceb02
-
-Sharing tags
-
-    $ git push origin --tags
 
 # Submodules
 

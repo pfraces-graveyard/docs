@@ -23,12 +23,12 @@ http://visionmedia.github.com/mocha/
 *   http://chaijs.com/
 
 Pensaba empezar probando **should.js** (usada en los ejemplos de mocha) ya que 
-sólo contiene el api should (mientras que chai tiene should, expect y assert) por
-que encuentro el api should el más elegante y por aquello de mantener un 
+sólo contiene el api should (mientras que chai tiene should, expect y assert)
+por que encuentro el api should el más elegante y por aquello de mantener un 
 minimalismo en el código propio y en el de las librerias elegidas...
 
-Pero he visto el potencial de sinon.js y por el momento no he encontrado un api más
-elegante que usándolo con chai mediante sinon-chai.
+Pero he visto el potencial de sinon.js y por el momento no he encontrado un api
+más elegante que usándolo con chai mediante sinon-chai.
 
 *   https://github.com/visionmedia/mocha/wiki
 *   http://sinonjs.org/
@@ -42,10 +42,29 @@ Así que empezaré con:
 *   sinon
 *   sinon-chai
 
-Aunque no he visto cómo correr tests en el navegador y reportar desde consola (a 
-la buster) con mocha, por lo que buster sigue siendo una opción a tener en cuenta
+**Update: 18/1/2013**
 
-*   
+Dejaré el uso de sinon para más adelante, cuando esté habituado a TDD
+
+1.  Empezar con tests bajo node
+
+    *   mocha
+    *   should
+
+2.  Luego tests bajo navegador
+
+    *   mocha
+    *   chai (should sólo es para node)
+    *   testacular
+
+## mocha.opts
+
+> _Mocha will attempt to load `./test/mocha.opts`, these are concatenated with
+> `process.argv`, though command-line args will take precedence_
+
+    --reporter spec
+    --ui bdd
+    --watch
 
 # Examples
 
