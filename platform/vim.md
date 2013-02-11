@@ -1,12 +1,5 @@
 # Gvim
 
-## [TODO] 
-
-Buscar otro syntax highlighter para markdown:
-
-*   que no haga fold por defecto
-*   que coloree los títulos de diferente modo
-
 ## Habilitar toda la funcionalidad de vim
 
 `~/.vimrc`
@@ -45,30 +38,9 @@ A 2 espacios
     set guioptions-=m
     set guioptions-=T
 
-## Highlight overflow
-
-Colorear el exceso de 79 caracteres
-
-Para una correcta visualización de código fuente se recomienda que se use
-una fuente monoespaciada y no superar los 80 caracteres. Debido a que hay
-algunos terminales que usan el 80º caracter como caracter de control, se
-coloreará a partir de 79 caracteres asegurando así la correcta
-visualización en cualquier medio
-
-`~/.vimrc`
-
-    highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
-    match OverLength /\%>79v.\+/
-
 ## Cursor
 
-### Color
-
-`~/.vimrc`
-
-    highlight Cursor guifg=#404040 guibg=#A9A9A9
-
-### Fijar (evitar parpadeo)
+### Fijar color (evitar parpadeo)
 
 `~/.vimrc`
 
@@ -101,7 +73,7 @@ Instalador de plugins
 
     $ cd ~/.vim/bundle/
 
-    $ git clone https://github.com/plasticboy/vim-markdown.git
+    $ git clone https://github.com/hallison/vim-markdown.git
     $ git clone https://github.com/pangloss/vim-javascript.git
     $ git clone https://github.com/MSch/vim-tamejs.git
     $ git clone https://github.com/digitaltoad/vim-jade.git
@@ -111,6 +83,10 @@ Instalador de plugins
 
     syntax on
     filetype plugin indent on
+
+    highlight Cursor guifg=#404040 guibg=#A9A9A9
+    highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
+    match OverLength /\%>79v.\+/
 
 ### Powerline
 
