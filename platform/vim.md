@@ -1,4 +1,4 @@
-# Vim
+# Gvim
 
 ## [TODO] 
 
@@ -7,15 +7,21 @@ Buscar otro syntax highlighter para markdown:
 *   que no haga fold por defecto
 *   que coloree los títulos de diferente modo
 
-## Configuración básica para gvim
+## Habilitar toda la funcionalidad de vim
 
 `~/.vimrc`
 
     set nocompatible
 
-    set ruler
-    set showmode
+## Resaltar caracteres de cierre
+
+`~/.vimrc`
+
     set showmatch
+
+## Ignorar mayúsculas al buscar
+
+`~/.vimrc`
 
     set ignorecase
     set smartcase
@@ -119,8 +125,8 @@ Instalador de plugins
 #### Terminus-Powerline.ttf
 
     $ sudo pacman -S terminus-font
-    $ cd ~/.fonts
-    $ wget https://gist.github.com/mikkeloscar/2416601/raw/18badb5d7af64b350c2864e548d5bc3912dffcac/Terminus-Powerline.ttf
+    $ mkdir ~/.fonts
+    $ curl -Sso ~/.fonts/Terminus-Powerline.ttf https://gist.github.com/mikkeloscar/2416601/raw/18badb5d7af64b350c2864e548d5bc3912dffcac/Terminus-Powerline.ttf
     $ fc-cache -vf
 
 `~/.vimrc`
@@ -151,8 +157,3 @@ Installation
 `~/.vimrc`
 
     call pathogen#helptags()
-
-## Referencias
-
-*   http://vim.wikia.com/wiki/Folding
-*   https://gist.github.com/mikkeloscar/2416601
