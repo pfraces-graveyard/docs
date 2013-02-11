@@ -10,7 +10,7 @@ Ideal lanzarlo cada dia
 
 Ideal después de actualizar el mirrorlist
 
-# bascar paquete
+# buscar paquete
 
     $ pacman -Ss paquete
 
