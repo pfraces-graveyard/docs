@@ -70,8 +70,9 @@ Como los numeros de linea ocupan 4 caracteres, se configura a 84 columnas
 
 `~/.vimrc`
 
-    set nu
-    set columns=84
+    set number
+    au BufRead * let &numberwidth = float2nr(log10(line("$"))) + 2
+          \| let &columns = &numberwidth + 80
 
 ## Cursor
 
