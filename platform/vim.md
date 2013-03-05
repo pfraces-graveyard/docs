@@ -64,6 +64,15 @@ A 2 espacios
     set guioptions-=m
     set guioptions-=T
 
+## Numeros de linea y 80 caracteres por linea
+
+Como los numeros de linea ocupan 4 caracteres, se configura a 84 columnas
+
+`~/.vimrc`
+
+    set nu
+    set columns=84
+
 ## Cursor
 
 ### Fijar color (evitar parpadeo)
