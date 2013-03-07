@@ -124,6 +124,14 @@ Instalador de plugins
     highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
     match OverLength /\%>79v.\+/
 
+### Current line and pos highlight
+
+`~/.vimrc`
+
+    au WinLeave * set nocursorline nocursorcolumn
+    au WinEnter * set cursorline cursorcolumn
+    set cursorline cursorcolumn
+
 ### Powerline
 
     $ cd ~/.vim/bundle/
