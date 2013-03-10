@@ -6,6 +6,12 @@
 
     set nocompatible
 
+## Encoding
+
+`~/.vimrc`
+
+    set encoding=utf-8
+
 ## Aprender las motions
 
     noremap <Up> <NOP>
