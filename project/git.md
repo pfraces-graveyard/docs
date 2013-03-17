@@ -53,9 +53,25 @@ decir, las modificaciones añadidas al stage mediante `git add`
 Se debe introducir el mensaje de commit a partir de la 1era linea, dejando
 el log de modificaciones por debajo
 
-Se puede omitir vim pasando el mensaje directamente por linea de comandos
+Se pueden añadir todas las modificaciones al stage sin hacer previamente
+`git add` mediante el flag `-a`, aunque esto no añadirá los untracked files
+(ficheros del working dir que no están la última revisión del repo)
+
+    $ git commit -a
+
+Se puede pasar el mensaje directamente por linea de comandos pero no es una
+práctica recomendada
 
     $ git commit -m 'mensaje de commit'
+
+Se recomienda crear mensajes de commit de máximo 50 caracteres con una breve
+descripción de las modificaciones del commit
+
+Se recomienda usar imperativos (`fix something` sobre `fixed something`)
+
+Si se requiere aportar una descripción mas detallada se debe hacer en un
+parrafo aparte, dejando una linea en blanco de separación. Este párrafo puede
+tener hasta un máximo de 72 caracteres por linea.
 
 ## Sync repos
 
@@ -75,7 +91,11 @@ Example:
 
 ## Prepare environment
 
-    $ git config --global core.editor "vim"
+Gvim (a diferencia de vim) necesita el flag `-f` para mantenerse en foreground 
+y hacer que git espere a que finalice la edición del mensaje de commit. De lo
+contrario git abortará por mensaje vacio
+
+    $ git config --global core.editor "gvim -f"
     $ git config --global user.email "you@example.com"
     $ git config --global user.name "Your Name"
 
@@ -240,10 +260,11 @@ Repositorios anidados
 
 # References
 
-* http://book.git-scm.com
-* https://help.github.com/articles/set-up-git
-* http://stackoverflow.com/questions/1260748/how-do-i-remove-a-git-submodule
-* https://help.github.com/articles/ignoring-files
-* http://wiki.domain.com/diaries/20120311_trac
-* http://git-scm.com/book/en/Git-Basics-Tagging
+*   http://book.git-scm.com
+*   https://help.github.com/articles/set-up-git
+*   http://stackoverflow.com/questions/1260748/how-do-i-remove-a-git-submodule
+*   https://help.github.com/articles/ignoring-files
+*   http://wiki.domain.com/diaries/20120311_trac
+*   http://git-scm.com/book/en/Git-Basics-Tagging
 *   http://stackoverflow.com/questions/2432764 
+*   http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html

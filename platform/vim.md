@@ -12,7 +12,7 @@
 
     set encoding=utf-8
 
-## Aprender las motions
+## Learning motions
 
     noremap <Up> <NOP>
     noremap <Down> <NOP>
@@ -21,7 +21,7 @@
 
 ### Motions
 
-En NORMAL mode:
+In NORMAL mode:
 
     <h> Move left
     <j> Move down
@@ -37,6 +37,15 @@ En NORMAL mode:
     <zt> Move current line to the top of the display
     <zz> Move current line to the middle of the display
     <zb> Move current line to the bottom of the display
+
+## Custom motions
+
+### Centered search
+
+`~/.vimrc`
+
+    nnoremap n nzz
+    nnoremap N Nzz
 
 ## Resaltar caracteres de cierre
 
@@ -87,6 +96,24 @@ Como los numeros de linea ocupan 4 caracteres, se configura a 84 columnas
 `~/.vimrc`
 
     set guicursor+=a:blinkon0
+
+## Restore cursor to file position
+
+`~/.vimrc`
+
+    set viminfo='10,"100,:20,%,n~/.viminfo
+
+    function! ResCur()
+      if line("'\"") <= line("$")
+        normal! g`"zz
+        return 1
+      endif
+    endfunction
+
+    augroup resCur
+      autocmd!
+      autocmd BufWinEnter * call ResCur()
+    augroup END
 
 ## Plugins
 
@@ -172,6 +199,13 @@ Installation
     $ cd YouCompleteMe
     $ ./install.sh
 
+### Fontsize
+
+    $ cd ~/.vim/bundle/
+    $ git clone https://github.com/resetcontrol/vim-fontsize.git
+
+## Plugins recomendados (pendientes de probar)
+
 ### Command-T
 
     $ cd ~/.vim/bundle/
@@ -183,3 +217,8 @@ Installation
 `~/.vimrc`
 
     call pathogen#helptags()
+
+### Fugitive
+
+    $ cd ~/.vim/bundle/
+    $ git clone https://github.com/tpope/vim-fugitive.git
