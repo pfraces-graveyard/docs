@@ -116,6 +116,19 @@ you like (setting is in seconds).
 
     $ git config --global credential.helper "cache --timeout=3600"
 
+## Shortcuts
+
+`~/.bashrc
+
+    # git aliases
+
+    alias gs='git status'
+    alias gl='git log --oneline'
+    alias gc='git add . && git commit'
+
+    alias gh='git push gh master && git push gh --tags'
+    alias bb='git push bb master && git push bb --tags'
+
 ## External tools
 
 ### meld
