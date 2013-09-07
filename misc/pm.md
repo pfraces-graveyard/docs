@@ -1,7 +1,6 @@
 # project management
 
-A project starts as a [draft][1], an easy way of declaring intentions:
-Chaotic brainstormed docuemntation
+A project starts as a [draft][1], an easy way of declaring intentions: chaotic brainstormed docuemntation
 
 When some draft gets the insterest to be developed the following steps must be
 done:
