@@ -40,8 +40,8 @@ Node-webkit applications with GUI
 
 *   owner: [desktopjs][6] *(create org)*
 
-[1]: http://github,com/pfraces-playground/drafts
-[2]: http://github,com/pfraces
+[1]: http://github.com/pfraces-playground/drafts
+[2]: http://github.com/pfraces
 [3]: http://github.com/corejs
 [4]: http://github.com/domjs
 [5]: http://github.com/shelljs
