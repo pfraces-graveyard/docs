@@ -47,3 +47,9 @@ El comando anterior tira error pero es necesario para que se cree el nodo
     $ sudo mount /dev/sdb1 /mnt/storage -t vfat
 
 Al pasar ficheros, desconectar desde el terminal antes de desconectar el usb
+
+# levantar la wifi
+
+    $ ip link set wlan0 up
+    $ iwconfig wlan0 essid 'my-essid' key 's:my-key'
+    $ dhcpcd wlan0
