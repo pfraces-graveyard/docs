@@ -23,25 +23,25 @@ JavaScript tiny libraries which can be used from **node.js** and browsers
 
 JavaScript tiny libraries which require an environment with DOM
 
-*   owner: [domjs][4] *(rename org: bojs)*
+*   owner: [bojs][4]
 *   npm
 
 ## Shell tools
 
 Node.js tools and libs for shell scripting
 
-*   owner: [shelljs][5] *(create org)*
+*   owner: [shelljs][5]
 *   npm
 
 ## Desktop apps
 
 Node-webkit applications with GUI
 
-*   owner: [desktopjs][6] *(create org)*
+*   owner: [desktopjs][6]
 
 [1]: http://github.com/pfraces-playground/drafts
 [2]: http://github.com/pfraces
 [3]: http://github.com/corejs
-[4]: http://github.com/domjs
+[4]: http://github.com/bojs
 [5]: http://github.com/shelljs
 [6]: http://github.com/desktopjs
