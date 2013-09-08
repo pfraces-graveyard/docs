@@ -7,7 +7,7 @@ done:
 
 1.  Create a repo under [pfraces][2] personal github account
 2.  Refactor the draft to be a `README.md` with examples
-3.  Create unit tests with the api showed in the `README.md` examples
+3.  Create unit tests with the api showed in the previous examples
 
 When the project obtains an usable version, publish it transfering its
 ownership to one of the following github organizations
