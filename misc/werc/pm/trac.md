@@ -1,8 +1,0 @@
-# Cómo usar trac
-
-
-
-
-
-
-
