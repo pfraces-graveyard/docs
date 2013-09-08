@@ -1,0 +1,49 @@
+# lanzar otra consola gráfica
+
+    $ startx -- :1 vt8
+
+# crear nuevo usuario
+
+    $ usermod -g users -G audio,disk,optical,power,storage,wheel pau
+
+# crear iso de un cd
+
+    $ sudo wodim -v -speed=2 -dev='/dev/scd0' source.iso
+    $ wodim -devices
+    $ wodim -scanbus | grep RW | awk '{print $1}'
+
+# reporiducir dvd
+
+    $ mplayer dvd://<numero de capitulo> -dvd-device /dev/sr0
+
+`/dev/cdrom` es un enlace simbolico a `/dev/sr0`. se puede crear otro que se
+llame `/dev/dvd`. **mplayer** buscara por defecto en `/dev/dvd`
+
+    $ mplayer dvd://1
+
+# qemu
+
+    $ qemu-img create -f qcow2 hd.qcow 700M
+    $ qemu-system-x86_64 -cdrom file.iso -boot d hd.qcow
+
+# hacer backups
+
+    $ cd $HOME
+    $ sudo tar czhf backup.laptop.tar.gz --exclude="distro/*" dev/ doc/
+
+# montar usb
+
+    $ sudo mount /dev/disk/by-label/ZIP\\x20ZIP /mnt/storage/
+    $ sudo mount /dev/cdrom /mnt/storage/
+    $ sudo umount /mnt/storage/
+
+# montar andriod
+
+    $ sudo mount /dev/sdb /mnt/storage -t vfat
+
+El comando anterior tira error pero es necesario para que se cree el nodo
+`/dev/sdb1`, el cual si podemos montar con:
+
+    $ sudo mount /dev/sdb1 /mnt/storage -t vfat
+
+Al pasar ficheros, desconectar desde el terminal antes de desconectar el usb
