@@ -69,3 +69,9 @@ Al pasar ficheros, desconectar desde el terminal antes de desconectar el usb
         # dvi
         --output DVI-0 --auto --left-of HDMI-0 \
         --output DVI-1 --auto --right-of HDMI-0 
+
+# mostrar fichero con menos lineas
+
+Para usar un fichero como template, mejor coger el más sencillo
+
+    wc -l * | sort
