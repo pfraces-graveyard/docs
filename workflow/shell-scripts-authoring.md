@@ -34,6 +34,16 @@ The migration may take a while because you need to isolate the behavior that
 could be useful for other users, but the effort always is worthwhile **even if
 you are its only user**
 
+**Upd: Avoid using bash completely**
+
+The rules below must be applied only on personal scripts, due to some tools:
+
+*   `dotfiles`
+*   `dotfiles-installer`
+*   `shelljs` tools
+
+So all bash scripting must be saved in private repos
+
 ## 3. bash aliases
 
 Command shortcuts
