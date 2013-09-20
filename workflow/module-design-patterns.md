@@ -8,7 +8,7 @@
 *   if not, `this` is a reference to **global object** except in
     `"strict mode";` where an exception is launched
 
-## constructores
+## constructors
 
 *   they are functions (not methods) where we can attach properties to `this`
     and they become properties of the instance object created when the
