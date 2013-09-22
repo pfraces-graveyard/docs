@@ -8,7 +8,7 @@
 *   if not, `this` is a reference to **global object** except in
     `"strict mode";` where an exception is launched
 
-## constructores
+## constructors
 
 *   they are functions (not methods) where we can attach properties to `this`
     and they become properties of the instance object created when the
@@ -87,11 +87,12 @@ copy the function reference without using `bind`
 
 ## exception when `new` not used
 
-*   stackoverflow thread?
+*   [Is JavaScript 's “new” Keyword Considered Harmful?][2]
 
 ## autoinstatiate when `new` not used
 
-*   stackoverflow thread? (same as above)
+*   [Is JavaScript 's “new” Keyword Considered Harmful?][2]
+
 
 ## autoinstantiate with arguments
 
@@ -99,3 +100,4 @@ copy the function reference without using `bind`
 *   this is useful when the constructor is overloaded
 
 [1]: http://stackoverflow.com/questions/1606797/use-of-apply-with-new-operator-is-this-possible
+[2]: http://stackoverflow.com/a/383503/1815446
