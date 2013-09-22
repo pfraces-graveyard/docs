@@ -12,32 +12,6 @@
 
     set encoding=utf-8
 
-## Learning motions
-
-    noremap <Up> <NOP>
-    noremap <Down> <NOP>
-    noremap <Left> <NOP>
-    noremap <Right> <NOP>
-
-### Motions
-
-In NORMAL mode:
-
-    <h> Move left
-    <j> Move down
-    <k> Move up
-    <l> Move right
-
-    <Ctrl+B> Move a page back
-    <Ctrl+F> Move a page forward
-
-    <b> Move to the start of the previous word
-    <w> Move to the start of the next word
-
-    <zt> Move current line to the top of the display
-    <zz> Move current line to the middle of the display
-    <zb> Move current line to the bottom of the display
-
 ## Custom motions
 
 ### Centered search
