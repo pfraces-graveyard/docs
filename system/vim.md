@@ -110,7 +110,7 @@ Instalador de plugins
 
 `~/.vimrc`
 
-    colorsheme distinguished
+    colorscheme distinguished
 
 ### Code highlight
 
