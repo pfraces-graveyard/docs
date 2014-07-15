@@ -96,7 +96,7 @@ Como los numeros de linea ocupan 4 caracteres, se configura a 84 columnas
 Instalador de plugins
 
     $ mkdir -p ~/.vim/autoload ~/.vim/bundle
-    $ curl -Sso ~/.vim/autoload/pathogen.vim \
+    $ curl -LSso ~/.vim/autoload/pathogen.vim \
       https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 
 `~/.vimrc`
