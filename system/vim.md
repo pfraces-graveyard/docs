@@ -129,7 +129,7 @@ Instalador de plugins
 
     highlight Cursor guifg=#404040 guibg=#A9A9A9
     highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
-    match OverLength /\%>79v.\+/
+    match OverLength /\%79v./
 
 ### Current line and pos highlight
 
