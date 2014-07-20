@@ -16,6 +16,91 @@
 `~/.vimrc`
 
 ```vimL
+"
+" misc
+"
+set nocompatible
+set encoding=utf-8
+set ignorecase
+set smartcase
+
+"
+" indentation
+"
+set autoindent
+set expandtab
+set smarttab
+set tabstop=2
+set shiftwidth=2
+
+"
+" centered search
+"
+nnoremap n nzz
+nnoremap N Nzz
+
+"
+" hide menu bars
+"
+set guioptions-=m
+set guioptions-=T
+
+"
+" linenumbers
+"
+set number
+set nuw=5
+
+"
+" 80 characters width
+"
+let &columns = &nuw + 80
+
+"
+" disable cursor blink
+"
+set guicursor+=a:blinkon0
+
+"
+" restore cursor to file position
+"
+set viminfo='10,"100,:20,%,n~/.viminfo
+
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"zz
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
+
+"
+" pathogen
+"
+call pathogen#infect()
+
+"
+" theme
+"
+colorscheme distinguished
+
+"
+" code highlight
+"
+syntax on
+filetype plugin indent on
+
+highlight Cursor guifg=#404040 guibg=#A9A9A9
+highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
+
+"
+" 80 characters warning
+"
+match OverLength /\%79v./
 ```
 
 ## Extras
