@@ -110,8 +110,21 @@ match OverLength /\%79v./
 **~/.bashrc**
 
 ```
-alias vim='gvim'
+function vim () {
+    (gvim -f "$@" &)
+}
 ```
+
+[snippet and explanation source](http://askubuntu.com/questions/132977/how-to-get-global-application-menu-for-gvim#comment503002_132993)
+
+>   The bug is related to gvim's way of going into background mode. gvim -f
+    keeps gvim in the foreground. To make the shell run gvim in the background
+    we add an &. The parenthesis in (foo &) runs the command in a subshell, so
+    that gvim does not become a background process of the current shell. Without
+    parenthesis, closing the terminal by clicking the X would also kill gvim.
+    function foo () { ... } creates a shell function. We must add /usr/bin/ to
+    gvim, otherwise we will get an infinitely recursive function. "$@" passes
+    all arguments.
 
 ### Git
 
