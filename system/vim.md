@@ -103,6 +103,25 @@ highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
 match OverLength /\%79v./
 ```
 
+## System integration
+
+### Bash
+
+**~/.bashrc**
+
+```
+alias vim='gvim'
+```
+
+### Git
+
+**~/.gitconfig**
+
+```
+[core]
+ 	editor = gvim -f
+```
+
 ## Extras
 
 ### Code highlight plugins
