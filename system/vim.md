@@ -53,8 +53,10 @@ set nuw=5
 
 "
 " 80 characters width
+" 24 lines height
 "
 let &columns = &nuw + 80
+set lines=24
 
 "
 " disable cursor blink
