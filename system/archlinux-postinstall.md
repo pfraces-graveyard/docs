@@ -33,10 +33,9 @@ Download and build the package
 Install utilities
 -----------------
 
-    sudo packer -S \
+    sudo packer -S --noconfirm \
       bash-completion \
       downgrade \
-      aurvote \
       the_silver_searcher \
       xclip \
       xkill \
