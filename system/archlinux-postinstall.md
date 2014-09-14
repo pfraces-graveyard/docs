@@ -4,14 +4,14 @@ Archlinux installation
 Gvim
 ----
 
-    sudo pacman -S gvim
+    sudo pacman -S --noconfirm gvim
 
 Config: https://github.com/pfraces-wip/doc/blob/master/system/gvim.md
 
 Git
 ---
 
-    sudo pacman -S git
+    sudo pacman -S --noconfirm git
 
 Config: https://github.com/pfraces-wip/doc/blob/master/system/git.md
 
@@ -20,7 +20,7 @@ Packer
 
 Install dependencies
 
-    sudo pacman -S base-devel wget jshon expac
+    sudo pacman -S --noconfirm base-devel wget jshon expac
 
 Download and build the package
 
@@ -57,12 +57,12 @@ Z
 Chromium
 --------
 
-    sudo packer -S chromium
+    sudo packer -S --noconfirm chromium
     sudo pacman -Rscn firefox
 
 ### Update flash plugin
 
-    sudo packer -S chromium-pepper-flash
+    sudo packer -S --noconfirm chromium-pepper-flash
 
 Restart chromium to enable the plugin
 
@@ -85,7 +85,7 @@ Desktop environment
 
 ### Custom
 
-    sudo packer -S \
+    sudo packer -S --noconfirm \
       dmenu \
       slock \
       scrot
