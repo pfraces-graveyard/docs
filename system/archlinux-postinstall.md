@@ -30,6 +30,10 @@ Download and build the package
     makepkg
     sudo pacman -U packer-*.pkg.tar.xz
 
+**~/.bashrc**
+
+    alias get='sudo packer -S --noconfirm'
+
 Install utilities
 -----------------
 
