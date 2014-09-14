@@ -21,4 +21,4 @@ Vote/Unvote
     aurvote --vote <package>
     aurvote --unvote <package>
 
-Also you can vote/unvote from the package's web page (https://aur.archlinux.org/packages/<package>) 
+Also you can vote/unvote from the package's web page (`https://aur.archlinux.org/packages/<package>`) 
