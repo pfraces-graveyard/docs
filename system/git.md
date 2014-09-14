@@ -114,6 +114,10 @@ Meld
 *   Enable line numbers
 *   Enable highlight current line
 
+### Git diff
+
+    meld .
+
 Online books
 ------------
 
