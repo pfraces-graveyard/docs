@@ -68,8 +68,6 @@ Bash aliases
 **~/.bashrc**
 
 ```
-## git
-
 alias ga='git add --all .'
 alias gc='ga && git commit'
 alias gg='gc && gp'
