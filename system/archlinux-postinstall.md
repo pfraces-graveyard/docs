@@ -1,5 +1,5 @@
-Archlinux installation
-======================
+Archlinux postinstall
+=====================
 
 Gvim
 ----
@@ -14,25 +14,6 @@ Git
     sudo pacman -S --noconfirm git
 
 Config: https://github.com/pfraces-wip/doc/blob/master/system/git.md
-
-Packer
-------
-
-Install dependencies
-
-    sudo pacman -S --noconfirm base-devel wget jshon expac
-
-Download and build the package
-
-    mkdir -p ~/build/packer/
-    cd ~/build/packer/
-    wget https://aur.archlinux.org/packages/pa/packer/PKGBUILD 
-    makepkg
-    sudo pacman -U packer-*.pkg.tar.xz
-
-**~/.bashrc**
-
-    alias get='sudo packer -S --noconfirm'
 
 Install utilities
 -----------------
