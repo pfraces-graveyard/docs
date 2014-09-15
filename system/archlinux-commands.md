@@ -1,10 +1,33 @@
+Misc archlinux commands
+=======================
+
+Users management
+----------------
+
+### Add user
+
+```
+useradd -m -g users \
+  -G audio,optical,power,storage,wheel \
+  -s /bin/bash \
+  pfraces
+```
+
+### Update user groups
+
+```
+usermod -g users \
+  -G audio,optical,power,storage,wheel \
+  pfraces
+```
+
+### Delete user
+
+    userdel -r pfraces
+
 # lanzar otra consola gráfica
 
     $ startx -- :1 vt8
-
-# crear nuevo usuario
-
-    $ usermod -g users -G audio,disk,optical,power,storage,wheel pau
 
 # crear iso de un cd
 
@@ -68,10 +91,4 @@ Al pasar ficheros, desconectar desde el terminal antes de desconectar el usb
 
         # dvi
         --output DVI-0 --auto --left-of HDMI-0 \
-        --output DVI-1 --auto --right-of HDMI-0 
-
-# mostrar fichero con menos lineas
-
-Para usar un fichero como template, mejor coger el más sencillo
-
-    wc -l * | sort
+        --output DVI-1 --auto --right-of HDMI-0
