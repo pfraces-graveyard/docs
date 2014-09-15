@@ -70,6 +70,7 @@ Bash aliases
 ```
 alias ga='git add --all .'
 alias gc='ga && git commit'
+alias gd='git diff'
 alias gg='gc && gp'
 alias gl='git log --oneline --decorate --graph'
 alias gp='gum && git push origin master && git push origin --tags'
