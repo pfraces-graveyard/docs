@@ -103,7 +103,11 @@ function ghc () {
     account=$1
     repo=$2
 
-    git clone https://github.com/${account}/${repo}.git
+    if test -n "$MANTAINER"
+    then user="$MANTAINER@"
+    fi
+
+    git clone https://"$user"github.com/${account}/${repo}.git
 }
 ```
 
