@@ -1,5 +1,5 @@
-Misc archlinux commands
-=======================
+Archlinux commands
+==================
 
 Users management
 ----------------
