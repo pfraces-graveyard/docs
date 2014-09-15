@@ -1,5 +1,5 @@
-Archlinux installation
-======================
+Archlinux install
+=================
 
 CPU architecture
 ----------------
