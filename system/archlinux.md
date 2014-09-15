@@ -1,131 +1,96 @@
-# ArchLinux
+Archlinux installation
+======================
 
-Guía de uso básico
+CPU architecture
+----------------
 
-# Antes de empezar...
+```
+cat /proc/cpuinfo | sed -nr 's/.*(lm).*/\1/p' | sed 1q |
+  test $(cat) == 'lm' && echo 'x86_64' || echo 'i686'
+```
 
-## Arquitectura CPU
+Get the ISO
+-----------
 
-    $ cat /proc/cpuinfo | sed -nr 's/.*(lm).*/\1/p' | sed 1q
+*   http://www.archlinux.org/download/
 
-*   **lm:** stands for long mode cpu (x86_64)
-*   **_(no output)_:** i686
+Choose the proper **netinstall** ISO based on the CPU architecture
 
-## Arquitectura OS
+Installation
+------------
 
-    $ uname -m
+*   https://wiki.archlinux.org/index.php/installation_guide
+*   https://wiki.archlinux.org/index.php/Beginners'_guide
+*   https://github.com/helmuthdu/aui
 
-## ISOs
+Mailing lists
+-------------
 
-http://www.archlinux.org/download/
+*   https://mailman.archlinux.org/mailman/listinfo/arch-announce
 
-*   **Atención:** Elegir la versión **netinstall** de la arquitectura apropiada
+Setup pacman
+------------
 
-## Listas de correo
+```
+wget --no-check-certificate -q -O - \
+  "https://www.archlinux.org/mirrorlist/?country=ES&protocol=http&ip_version=4" |
+  sed -n '/^#Server/ s/^#//' |
+  tee /etc/pacman.d/mirrorlist
 
-https://mailman.archlinux.org/mailman/listinfo/arch-announce
-Cosas a tener en cuenta al actualizar
+pacman -Syy
+pacman -S --noconfirm pacman
+pacman-key --init
+pacman-key --populate archlinux
+```
 
-https://mailman.archlinux.org/mailman/listinfo/arch-dev-public
-Qué se queda obsoleto, porqué y por que va a ser reemplazado
+Install sudo
+------------
 
-## Información general
+    pacman -S --noconfirm sudo
 
-### [TODO]
+Add users
+---------
 
-*   Enlace a Begginers guide
-*   Enlace a official guide
+```
+useradd -m -g users \
+  -G audio,optical,power,storage,wheel \
+  -s /bin/bash \
+  pfraces
+```
 
-# Instalación
+### Set passwords
 
-## [TODO]
+    passwd root
+    passwd pfraces
 
-*   kernel modules https://wiki.archlinux.org/index.php/Kernel_modules
-*   particiones con **LVM** https://wiki.archlinux.org/index.php/LVM
-*   **arch-install-scripts**
-*   **systemd** https://wiki.archlinux.org/index.php/Systemd
-*   booteo con **syslinux** https://wiki.archlinux.org/index.php/Syslinux
+Switch to a non-privileged user
+-------------------------------
 
-# Configurar la red
+    exit
 
-## [TODO]
+Initial system update
+---------------------
 
-*   método manual
-*   rc.conf (o donde toque con systemd
-*   netcfg
-*   wicd
-*   ip fija
-*   dhcp
-*   ethernet
-*   wifi
-*   wep
-*   wpa
-*   dns
+### Install reflector
 
-# Actualización inicial del sistema
+    sudo pacman -S --noconfirm reflector
 
-1.  Mirror mínimo:
+### Install packer
 
-        [root]$ wget --no-check-certificate -q -O - \
-          "https://www.archlinux.org/mirrorlist/?country=ES&protocol=http&ip_version=4" |
-          sed -n '/^#Server/ s/^#//' |
-          tee /etc/pacman.d/mirrorlist
+```
+sudo pacman -S --noconfirm base-devel wget jshon expac
+mkdir -p ~/.build/packer
+cd ~/.build/packer
+wget https://aur.archlinux.org/packages/pa/packer/PKGBUILD 
+makepkg
+sudo pacman -U packer-*.pkg.tar.xz
+```
 
-2.  Renovar repositorios 
+### System update
 
-    Después de actualizar los mirrors es bueno forzar la actualización de los
-    repositorios
+```
+sudo reflector --verbose -l 3 --sort rate --save /etc/pacman.d/mirrorlist
+sudo packer -Syu --noconfirm
+```
 
-        [root]$ pacman -Syy
-
-3.  Actualizar `pacman`
-
-        [root]$ pacman -S --noconfirm pacman
-
-4.  Inicializar claves de `pacman`
-
-        [root]$ pacman-key --init
-        [root]$ pacman-key --populate archlinux
-
-5.  Usar `reflector` para optimizar `mirrorlist`
-
-        [root]$ pacman -S --noconfirm reflector
-        [root]$ reflector -l 5 --sort rate --save /etc/pacman.d/mirrorlist
-        [root]$ pacman -Syy
-
-6.  Actualizar el sistema
-
-        [root]$ pacman -Syu
-
-# Gestión de usuarios
-
-*   Añadir usuario
-
-        [root]$ useradd -m -g users \
-          -G audio,optical,power,storage,wheel \
-          -s /bin/bash archie
-
-*   Definir password de usuario
-
-        [root]$ passwd archie
-
-*   Actualizar grupos
-
-        [root]$ usermod -g users -G audio,optical,power,storage,wheel archie
-
-*   Eliminar usuario
-
-        [root]$ userdel -r archie
-
-# Instalar herramientas básicas
-
-    $ sudo pacman -S --noconfirm sudo vim openssh
-
-Instalar `packer`
-
-    $ sudo pacman -S base-devel wget git jshon
-    $ mkdir -p ~/build/packer/
-    $ cd ~/build/packer/
-    $ wget https://aur.archlinux.org/packages/pa/packer/PKGBUILD 
-    $ makepkg
-    $ sudo pacman -U packer-*.pkg.tar.xz
+**TIP:** Save the previous commands in an executable script for further usage
