@@ -58,10 +58,6 @@ Meld
 *   Enable line numbers
 *   Enable highlight current line
 
-### Git diff
-
-    meld .
-
 Bash aliases
 ------------
 
@@ -69,32 +65,26 @@ Bash aliases
 
 ```
 alias ga='git add --all .'
-alias gc='ga && git commit'
-alias gd='git diff'
+alias gaz='git reset HEAD .'
+alias gb='git checkout -b'
+alias gbc='git rev-parse --abbrev-ref HEAD'
+alias gc='test $(gbc) != master && ga && git commit'
+alias gd='(meld . &)'
+alias gdz='git checkout .'
 alias gg='gc && gp'
+alias gi='git update-index --assume-unchanged'
+alias gil='git ls-files -v | grep "^[[:lower:]]"'
+alias giz='git update-index --no-assume-unchanged'
+alias gk='find . -type d -empty -exec touch {}/.keep \;'
 alias gl='git log --oneline --decorate --graph'
-alias gp='gum && git push origin master && git push origin --tags'
+alias gp='gu && git push origin $(gbc) && git push origin --tags'
 alias gr='git remote -v'
 alias gs='git status'
-alias gu='git pull origin'
-alias gum='gu master'
-alias gz='git reset HEAD .'
+alias gu='git pull origin master'
+alias gz='gaz && gmz'
 ```
 
-Keep directory structures
--------------------------
-
-Create empty .keep files to add a directory structure to git
-
-**~/.bashrc**
-
-    alias gk='find . -type d -empty -exec touch {}/.keep \;'
-
-*   http://stackoverflow.com/a/21422128/1815446
-*   http://stackoverflow.com/a/5871742/1815446
-
-Clone a github repo
--------------------
+### Clone a github repo
 
 **~/.bashrc**
 
@@ -103,29 +93,28 @@ function ghc () {
     account=$1
     repo=$2
 
-    if test -n "$MANTAINER"
-    then user="$MANTAINER@"
-    fi
-
-    git clone https://"$user"github.com/${account}/${repo}.git
+    git clone https://github.com/${account}/${repo}.git
 }
 ```
 
-Clone a github own repo
------------------------
+### Clone a github own repo
 
 **~/.bashrc**
 
 ```
 function ghco () {
     repo=$1
+    org=$2
+    
+    if test -z org
+    then org=pfraces
+    fi
 
-    git clone https://pfraces@github.com/pfraces/${repo}.git
+    git clone https://pfraces@github.com/${org}/${repo}.git
 }
 ```
 
-Github export
--------------
+### Github export
 
 **~/.bashrc**
 
