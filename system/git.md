@@ -63,7 +63,7 @@ Bash aliases
 
 **~/.bashrc**
 
-```
+```sh
 alias ga='git add --all .'
 alias gaz='git reset HEAD .'
 alias gb='git checkout -b'
@@ -88,7 +88,7 @@ alias gz='gaz && gmz'
 
 **~/.bashrc**
 
-```
+```sh
 function ghc () {
     account=$1
     repo=$2
@@ -101,7 +101,7 @@ function ghc () {
 
 **~/.bashrc**
 
-```
+```sh
 function ghco () {
     repo=$1
     org=$2
@@ -118,7 +118,7 @@ function ghco () {
 
 **~/.bashrc**
 
-```
+```sh
 function ghe () {
     account=$1
     repo=$2
