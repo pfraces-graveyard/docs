@@ -69,7 +69,7 @@ function error () {
   (exit 1)
 }
 
-errMaster="unable to commit in master"
+errMaster="unable to commit to master branch"
 
 alias ga='git add --all .'
 alias gaz='git reset HEAD .'
