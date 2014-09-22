@@ -111,13 +111,13 @@ function ghc () {
 ```sh
 function ghco () {
     repo=$1
-    org=$2
+    account=$2
     
-    if test -z org
-    then org=pfraces
+    if test -z $account
+    then account=pfraces
     fi
 
-    git clone https://pfraces@github.com/${org}/${repo}.git
+    git clone https://pfraces@github.com/${account}/${repo}.git
 }
 ```
 
