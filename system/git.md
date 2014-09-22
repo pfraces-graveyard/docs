@@ -64,11 +64,18 @@ Bash aliases
 **~/.bashrc**
 
 ```sh
+function error () {
+  echo $@ >&2
+  (exit 1)
+}
+
+errMaster="unable to commit in master"
+
 alias ga='git add --all .'
 alias gaz='git reset HEAD .'
 alias gb='git checkout -b'
 alias gbc='git rev-parse --abbrev-ref HEAD'
-alias gc='test $(gbc) != master && ga && git commit'
+alias gc='test $(gbc) != master && ga && git commit || error $errMaster'
 alias gd='(meld . &)'
 alias gdz='git checkout .'
 alias gg='gc && gp'
