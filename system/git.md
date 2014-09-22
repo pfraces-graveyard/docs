@@ -50,6 +50,13 @@ Meld
 
     pacman -S meld pygtksourceview2
 
+**~/.gitconfig**
+
+    [merge]
+      tool = meld
+
+Lanch it with `git mergetool`
+
 ### Config
 
 **Edit > Preferences**
@@ -84,6 +91,7 @@ alias gil='git ls-files -v | grep "^[[:lower:]]"'
 alias giz='git update-index --no-assume-unchanged'
 alias gk='find . -type d -empty -exec touch {}/.keep \;'
 alias gl='git log --oneline --decorate --graph'
+alias gm='git mergetool'
 alias gp='gu && git push origin $(gbc) && git push origin --tags'
 alias gr='git remote -v'
 alias gs='git status'
