@@ -65,45 +65,111 @@ Lanch it with `git mergetool`
 *   Enable line numbers
 *   Enable highlight current line
 
-Bash aliases
-------------
+Ultimate Git Script
+-------------------
 
 **~/.bashrc**
 
-```sh
-function error () {
-  echo $@ >&2
-  (exit 1)
+```bash
+function save () {
+    function err () {
+        code="ERR_$1"
+        msg="MSG_$code"
+
+        echo err: ${!msg} >&2
+        return ${!code}
+    }
+
+    ERR_NO_GIT_REPO=1
+    ERR_NO_USER_NAME=2
+    ERR_NO_USER_EMAIL=3
+    ERR_EMPTY_REPO=4
+    ERR_NO_ORIGIN=5
+    ERR_MASTER_BRANCH=6
+    ERR_NO_COMMIT_MESSAGE=7
+    ERR_MERGE_CONFLICT=8
+
+    MSG_ERR_NO_GIT_REPO='not a git repository'
+    MSG_ERR_NO_USER_NAME='unable to commit without user name'
+    MSG_ERR_NO_USER_EMAIL='unable to commit without user email'
+    MSG_ERR_EMPTY_REPO='unable to commit to an empty repo'
+    MSG_ERR_NO_ORIGIN='unable to commit to a repo without origin'
+    MSG_ERR_MASTER_BRANCH='unable to commit to master branch'
+    MSG_ERR_NO_COMMIT_MESSAGE='unable to commit with empty message'
+    MSG_ERR_MERGE_CONFLICT='merge conflict'
+
+    currentBranch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+    newTag=$1
+
+    if test -z "$currentBranch"
+    then return $(err NO_GIT_REPO)
+    fi
+
+    if test -z "$(git config user.name)"
+    then return $(err NO_USER_NAME)
+    fi
+
+    if test -z "$(git config user.email)"
+    then return $(err NO_USER_EMAIL)
+    fi
+
+    if test "$currentBranch" = 'HEAD'
+    then return $(err EMPTY_REPO)
+    fi
+
+    if test -z "$(git remote | grep origin)"
+    then return $(err NO_ORIGIN)
+    fi
+
+    if test "$currentBranch" = 'master' -a "$allow_master" != 'true'
+    then return $(err MASTER_BRANCH)
+    fi
+
+    if test -n "$(git status --short)"
+    then
+        git add --all .
+        git commit || git reset HEAD -- . || return $(err NO_COMMIT_MESSAGE)
+    fi
+
+    git pull origin master || return $(err MERGE_CONFLICT)
+    
+    test -n "$newTag" && git tag $newTag
+    git push origin $currentBranch
+    git push origin --tags
 }
+```
 
-errMaster="unable to commit to master branch"
+Aliases
+-------
 
-alias ga='git add --all .'
-alias gaz='git reset HEAD .'
+**~/.bashrc**
+
+```bash
+alias g='save'
+alias g!='allow_master=true save'
+
 alias gb='git checkout -b'
-alias gbc='git rev-parse --abbrev-ref HEAD'
-alias gc='test $(gbc) != master && ga && git commit || error $errMaster'
 alias gd='(meld . &)'
 alias gdz='git checkout .'
-alias gg='gc && gp'
 alias gi='git update-index --assume-unchanged'
 alias gil='git ls-files -v | grep "^[[:lower:]]"'
 alias giz='git update-index --no-assume-unchanged'
 alias gk='find . -type d -empty -exec touch {}/.keep \;'
 alias gl='git log --oneline --decorate --graph'
 alias gm='git mergetool'
-alias gp='gu && git push origin $(gbc) && git push origin --tags'
 alias gr='git remote -v'
 alias gs='git status'
 alias gu='git pull origin master'
-alias gz='gaz && gmz'
 ```
+
+Github helpers
+--------------
 
 ### Clone a github repo
 
 **~/.bashrc**
 
-```sh
+```bash
 function ghc () {
     account=$1
     repo=$2
@@ -116,7 +182,7 @@ function ghc () {
 
 **~/.bashrc**
 
-```sh
+```bash
 function ghco () {
     repo=$1
     account=$2
@@ -133,7 +199,7 @@ function ghco () {
 
 **~/.bashrc**
 
-```sh
+```bash
 function ghe () {
     account=$1
     repo=$2
