@@ -15,8 +15,22 @@ Install plugins
 ### Plugins
 
 *   sublimelinter
-*   sublimelinter-jshint
+*   sublimelinter jshint
 *   soda theme
 *   emmet
 *   docblockr
-*   tern_for_sublime
+*   tern for sublime
+
+Configuration
+-------------
+
+### Disable automatic loading of last session
+
+Edit user preferences (`Preferences > Settings - User`)
+
+```json
+{
+  "hot_exit": false,
+  "remember_open_files": false
+}
+```
