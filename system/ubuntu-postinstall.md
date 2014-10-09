@@ -81,6 +81,8 @@ Source: http://askubuntu.com/a/108306
 Remove 'show desktop' from window switcher
 ------------------------------------------
 
+*(Ignore this step if you are going to disable window grouping as shown below)*
+
 Install unity-tweak-tool
 
     sudo apt-get install unity-tweak-tool
@@ -105,6 +107,6 @@ Disable window grouping in window switcher
 
 *   Enable the Static Application Switcher by checking:
 
-        Window Management ▸ Static Application Switcher ▸ Enable Static Application Switcher
+        Window Management > Static Application Switcher > Enable Static Application Switcher
 
 Source: http://askubuntu.com/questions/68151/how-do-i-revert-alt-tab-behavior-to-switch-between-windows-on-the-current-worksp
