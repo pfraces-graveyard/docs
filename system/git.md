@@ -128,7 +128,12 @@ function save () {
     if test -n "$(git status --short)"
     then
         git add --all .
-        git commit || git reset HEAD -- . || return $(err NO_COMMIT_MESSAGE)
+        
+        if test "$(git commit)" != "0"
+        then
+            git reset HEAD -- .
+            return $(err NO_COMMIT_MESSAGE)
+        fi
     fi
 
     git pull origin master || return $(err MERGE_CONFLICT)
