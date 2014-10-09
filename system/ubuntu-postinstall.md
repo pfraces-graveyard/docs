@@ -1,5 +1,17 @@
-Ubuntu (14.04) Post-Install
+Ubuntu (14.04) Postinstall
 ===========================
+
+System upgrade
+--------------
+
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get autoremove
+
+Install synaptic
+----------------
+
+    sudo apt-get install synaptic
 
 Create custom launchers with super user privileges
 --------------------------------------------------
@@ -17,6 +29,41 @@ Edit the launcher by adding `gksudo` before the launcher command in the `Exec` d
     Exec=gksudo synaptic-pkexec
 
 Source: http://askubuntu.com/a/68023
+
+Install utilities (using synaptic)
+----------------------------------
+
+*   vim-gtk
+*   git
+*   meld
+*   chromium-browser
+*   pepperflashplugin-nonfree
+*   silversearcher-ag
+*   xclip
+*   htop
+*   skype
+*   wireshark
+
+Install utilities (from PPAs)
+-----------------------------
+
+### nodejs
+
+    sudo apt-get update
+    sudo apt-get install -y python-software-properties python g++ make
+    sudo add-apt-repository ppa:chris-lea/node.js
+    sudo apt-get update
+    sudo apt-get install nodejs
+
+Source: https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#ubuntu-mint-elementary-os
+
+### sublime text 3
+
+    sudo add-apt-repository ppa:webupd8team/sublime-text-3
+    sudo apt-get update
+    sudo apt-get install sublime-text-installer
+
+Source: http://www.webupd8.org/2013/07/sublime-text-3-ubuntu-ppa-now-available.html
 
 Change number of workspaces
 ---------------------------
