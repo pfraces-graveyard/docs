@@ -107,13 +107,13 @@ match OverLength /\%79v./
 
 ## System integration
 
-### Bash
+### Ubuntu
 
 **~/.bashrc**
 
 ```
 function vim () {
-    (gvim -f "$@" &)
+    (gvim -f "$@" 2>/dev/null &)
 }
 ```
 
@@ -135,6 +135,23 @@ function vim () {
 ```
 [core]
  	editor = gvim -f
+```
+
+## Vim recover
+
+Recover backup files after a system crash
+
+**~/.bashrc**
+
+```bash
+function vimrecover () {
+    $(which find) . -name '.*.sw*' |
+    while read file
+    do
+        $(which gvim) -rf $file 2>/dev/null
+        rm $file
+    done
+}
 ```
 
 ## Extras
