@@ -109,4 +109,30 @@ Disable window grouping in window switcher
 
         Window Management > Static Application Switcher > Enable Static Application Switcher
 
-Source: http://askubuntu.com/questions/68151/how-do-i-revert-alt-tab-behavior-to-switch-between-windows-on-the-current-worksp
+Source: http://askubuntu.com/questions/68151
+
+Install grip - github readme install preview
+--------------------------------------------
+
+    sudo apt-get install python-pip
+    sudo pip install grip
+
+To use it, simply:
+
+    grip
+
+Then visit `localhost:5000` to view the `readme.md` file at that location
+
+You can also specify your own file:
+
+    grip CHANGES.md
+
+And change port:
+
+    grip 8080
+
+Specifically render GitHub-Flavored Markdown, optionally with repo context:
+
+    grip --gfm --context=username/repo issue.md
+
+Source: http://stackoverflow.com/a/13781363/1815446
