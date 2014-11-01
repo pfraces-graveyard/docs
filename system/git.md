@@ -68,9 +68,22 @@ Lanch it with `git mergetool`
 Ultimate Git Script
 -------------------
 
+    save [tag]
+
 **~/.bashrc**
 
 ```bash
+
+##
+# ultimate git script
+# ===================
+#
+# Usage
+# -----
+#
+#     save [tag]
+#
+##
 function save () {
     function err () {
         code="ERR_$1"
