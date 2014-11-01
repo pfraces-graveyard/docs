@@ -82,7 +82,6 @@ Ultimate Git Script
 # -----
 #
 #     save [tag]
-#
 ##
 function save () {
     function err () {
