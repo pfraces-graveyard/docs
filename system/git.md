@@ -127,12 +127,12 @@ function save () {
 
     if test -n "$(git status --short)"
     then
-        git add --all .
+        git add --all
         git commit
         
         if test "$?" != "0"
         then
-            git reset HEAD -- .
+            git reset
             return $(err NO_COMMIT_MESSAGE)
         fi
     fi
@@ -151,12 +151,17 @@ Aliases
 **~/.bashrc**
 
 ```bash
+alias save!='allow_master=true save'
 alias g='save'
-alias g!='allow_master=true save'
+alias g!='save!'
 
+alias ga='git add --all'
+alias gaz='git reset'
 alias gb='git checkout -b'
-alias gd='(meld . &)'
-alias gdz='git checkout .'
+alias gc='ga && git commit'
+alias gd='git diff'
+alias gdg='(meld . &)'
+alias gdz='git reset --hard'
 alias gi='git update-index --assume-unchanged'
 alias gil='git ls-files -v | grep "^[[:lower:]]"'
 alias giz='git update-index --no-assume-unchanged'
