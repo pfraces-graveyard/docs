@@ -43,6 +43,10 @@ usermod -g users \
 llame `/dev/dvd`. **mplayer** buscara por defecto en `/dev/dvd`
 
     $ mplayer dvd://1
+    
+# convertir a dvd
+
+    $ ffmpeg -i input.mp4 -c copy -bsf h264_mp4toannexb output.ts
 
 # qemu
 
