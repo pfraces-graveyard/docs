@@ -111,7 +111,7 @@ Disable window grouping in window switcher
 
 Source: http://askubuntu.com/questions/68151
 
-Install grip - github readme install preview
+Install grip - github readme instant preview
 --------------------------------------------
 
     sudo apt-get install python-pip
