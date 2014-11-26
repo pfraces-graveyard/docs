@@ -59,6 +59,6 @@ Edit user preferences (`Preferences > Settings - User`)
   "auto_complete_triggers": [{
     "selector": "source.js",
     "characters": "."
-	}]
+  }]
 }
 ```
