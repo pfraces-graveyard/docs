@@ -51,3 +51,14 @@ Edit user preferences (`Preferences > Settings - User`)
   "translate_tabs_to_spaces": true
 }
 ```
+
+### Tern
+
+```json
+{
+  "auto_complete_triggers": [{
+    "selector": "source.js",
+    "characters": "."
+	}]
+}
+```
