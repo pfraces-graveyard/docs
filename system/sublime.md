@@ -19,18 +19,35 @@ Install plugins
 *   soda theme
 *   emmet
 *   docblockr
-*   tern for sublime
+*   tern for sublime: follow instructions at https://github.com/marijnh/tern_for_sublime
 
 Configuration
 -------------
 
-### Disable automatic loading of last session
-
 Edit user preferences (`Preferences > Settings - User`)
+
+### Disable automatic loading of last session
 
 ```json
 {
   "hot_exit": false,
   "remember_open_files": false
+}
+```
+
+### Disable word wrap
+
+```json
+{
+  "word_wrap": "false"
+}
+```
+
+### Indentation
+
+```json
+{
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true
 }
 ```
