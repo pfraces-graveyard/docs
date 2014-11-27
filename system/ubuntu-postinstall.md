@@ -43,6 +43,7 @@ Install utilities (using synaptic)
 *   htop
 *   skype
 *   wireshark
+*   gpick
 
 Install utilities (from PPAs)
 -----------------------------
