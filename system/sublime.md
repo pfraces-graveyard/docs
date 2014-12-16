@@ -52,6 +52,16 @@ Edit user preferences (`Preferences > Settings - User`)
 }
 ```
 
+Reindent current buffer (`Preferences > Key Bindings - User`)
+
+```json
+{
+  "keys": ["alt+shift+f"],
+  "command": "reindent",
+  "args": { "single_line": false }
+}
+```
+
 ### Tern
 
 ```json
