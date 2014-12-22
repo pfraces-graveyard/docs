@@ -23,6 +23,8 @@ set nocompatible
 set encoding=utf-8
 set ignorecase
 set smartcase
+set nowrap
+set guioptions=
 
 "
 " indentation
