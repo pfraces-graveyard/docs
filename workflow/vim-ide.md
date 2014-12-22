@@ -5,93 +5,6 @@ Use vim like an ide
 *   [buffers vs tabs](https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/)
 *   [buffers](http://vim.wikia.com/wiki/Buffers)
 
-Setup
------
-
-### auto resize
-
-Auto resize layout proportionally when main window is resized
-
-    :autocmd VimResized * :wincmd =
-
-### airline
-
-    cd ~/.vim/bundle
-    git clone https://github.com/bling/vim-airline
-
-#### symbols
-
-[powerline font installation](https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation)
-
-Look for a valid font path with `xset q`
-
-    cd <FONT_PATH>
-    wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
-    fc-cache -vf <FONT_PATH>
-
-    cd ~/.config/fontconfig/conf.d/
-    wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
-
-#### Enable airline
-
-```vimL
-set guifont=terminus
-set laststatus=2
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-```
-
-### unite
-
-    cd ~/.vim/bundle
-    git clone https://github.com/Shougo/unite.vim
-
-### vimfiler
-
-    cd ~/.vim/bundle
-    git clone https://github.com/Shougo/unite.vim
-    git clone https://github.com/Shougo/vimfiler.vim
-
-#### Default profile
-
-```vimL
-call vimfiler#custom#profile('default', 'context', {
-\ 'safe' : 0,
-\ 'explorer' : 1,
-\ 'split' : 1,
-\ 'toggle' : 1
-\ })
-```
-
-#### Default explorer
-
-    let g:vimfiler_as_default_explorer = 1
-
-#### Like Textmate icons.
-
-```vimL
-let g:vimfiler_tree_leaf_icon = ' '
-let g:vimfiler_tree_opened_icon = '▾'
-let g:vimfiler_tree_closed_icon = '▸'
-let g:vimfiler_file_icon = '-'
-let g:vimfiler_marked_file_icon = '*'
-```
-
-#### [TODO]
-
-*   hide line numbers
-*   hide cursor, show background current line
-*   vim key bindings
-    *   Show/Hide :VimFiler
-*   vimfiler key bindings
-    *   enter: edit in new vertical window
-    *   shift+enter: edit in new horizontal window
-*   open files in window with empty buffer if any
-*   never open files in vimfiler window
-*   keep vimfiler width when another window is closed
-*   keep window layout proportional when vimfiler is closed
-
 Layout
 ------
 
@@ -101,23 +14,13 @@ Layout
 
 ### Buffers
 
-Create a new buffer
+*   `:e filename` create a new buffer
+*   `:bad filename` create a hidden buffer
+*   `:ls` list buffers
+*   `:b [buffer]` move between buffers
+*   `:bd [buffer]` delete buffer
 
-    :e filename
-
-List buffers
-
-    :ls
-
-Move between buffers
-
-*   `:bn`
-*   `:bp`
-*   `:b [buffer]`
-
-Delete buffer
-
-    :bd [buffer]
+[TODO] Delete buffer without closing its containing window
 
 ### Windows
 
@@ -130,6 +33,10 @@ Move between windows
 
 *   `ctrl-w [hjkl]`
 *   `ctrl-w p` (previous)
+
+Close windows
+
+*   `:q`
 
 Resize windows
 
@@ -158,30 +65,85 @@ nn <script>   <SID>ws<   <C-W><<SID>ws
 nmap          <SID>ws    <Nop>
 ```
 
-Rotate windows
-
-*   `ctrl-w r`, `ctrl-w R`
-
 Change layout
 
 *   `ctrl-w [HJKL]` (move current window)
 *   `ctrl-w T` (move current window to new tab)
 
-Delete window
+statusline: airline
+-------------------
 
-*   `:q`
+    cd ~/.vim/bundle
+    git clone https://github.com/bling/vim-airline
 
-Extensions
-----------
+### config
 
-### unite
+```vimL
+set guifont=terminus
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+```
 
-*   File search
-*   Buffer search
+### symbols font
+
+[powerline font installation](https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation)
+
+Look for a valid font path with `xset q`
+
+    cd <FONT_PATH>
+    wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf
+    fc-cache -vf <FONT_PATH>
+
+    cd ~/.config/fontconfig/conf.d/
+    wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
+
+command launcher: unite
+-----------------------
+
+    cd ~/.vim/bundle
+    git clone https://github.com/Shougo/unite.vim
 
 [TODO]
 
-### vimfiler
+file explorer: vimfiler
+-----------------------
+
+    cd ~/.vim/bundle
+    git clone https://github.com/Shougo/unite.vim
+    git clone https://github.com/Shougo/vimfiler.vim
+
+### config
+
+Tree icons
+
+```vimL
+let g:vimfiler_tree_leaf_icon = ' '
+let g:vimfiler_tree_opened_icon = '▾'
+let g:vimfiler_tree_closed_icon = '▸'
+let g:vimfiler_file_icon = '-'
+let g:vimfiler_marked_file_icon = '*'
+```
+
+Default profile
+
+```vimL
+call vimfiler#custom#profile('default', 'context', {
+\ 'safe' : 0,
+\ 'explorer' : 1,
+\ 'split' : 1,
+\ 'toggle' : 1
+\ })
+```
+
+Default explorer
+
+```vimL
+let g:vimfiler_as_default_explorer = 1
+```
+
+### usage
 
 [vimfiler help](https://github.com/Shougo/vimfiler.vim/blob/master/doc/vimfiler.txt)
 
