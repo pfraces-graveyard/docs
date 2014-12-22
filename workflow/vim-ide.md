@@ -1,12 +1,12 @@
-Use gvim like an ide
-====================
+Use vim like an ide
+===================
 
 *   [use vim like an IDE](http://vim.wikia.com/wiki/Use_Vim_like_an_IDE)
 *   [buffers vs tabs](https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/)
 *   [buffers](http://vim.wikia.com/wiki/Buffers)
 
-Vim setup
----------
+Setup
+-----
 
 ### auto resize
 
@@ -19,7 +19,7 @@ Auto resize layout proportionally when main window is resized
     cd ~/.vim/bundle
     git clone https://github.com/bling/vim-airline
 
-#### Install fancy symbols
+#### symbols
 
 [powerline font installation](https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation)
 
@@ -42,6 +42,11 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 ```
 
+### unite
+
+    cd ~/.vim/bundle
+    git clone https://github.com/Shougo/unite.vim
+
 ### vimfiler
 
     cd ~/.vim/bundle
@@ -55,14 +60,9 @@ call vimfiler#custom#profile('default', 'context', {
 \ 'safe' : 0,
 \ 'explorer' : 1,
 \ 'split' : 1,
-\ 'toggle' : 1,
-\ 'no-quit' : 1
+\ 'toggle' : 1
 \ })
 ```
-
-#### Open vimfiler if no file args passed
-
-    autocmd VimEnter * if !argc() | VimFiler | endif
 
 #### Default explorer
 
@@ -78,22 +78,30 @@ let g:vimfiler_file_icon = '-'
 let g:vimfiler_marked_file_icon = '*'
 ```
 
-Project integration
--------------------
+#### [TODO]
 
-### Tabs and layouts
+*   hide line numbers
+*   hide cursor, show background current line
+*   vim key bindings
+    *   Show/Hide :VimFiler
+*   vimfiler key bindings
+    *   enter: edit in new vertical window
+    *   shift+enter: edit in new horizontal window
+*   open files in window with empty buffer if any
+*   never open files in vimfiler window
+*   keep vimfiler width when another window is closed
+*   keep window layout proportional when vimfiler is closed
+
+Layout
+------
 
 >   A buffer is the in-memory text of a file.
     A window is a viewport on a buffer.
     A tab page is a collection of windows.
 
-#### Buffers
+### Buffers
 
 Create a new buffer
-
-[TODO]
-
-Open file in a new buffer
 
     :e filename
 
@@ -105,33 +113,75 @@ Move between buffers
 
 *   `:bn`
 *   `:bp`
-*   `:b[buffer]`
+*   `:b [buffer]`
 
 Delete buffer
 
     :bd [buffer]
 
-#### Windows
+### Windows
 
 Create a new window
 
-*   `:new`
-*   `:vnew`
-
-Open file in a new window
-
-*   `:new filename`
-*   `:vnew filename`
+*   `:n [filename]`
+*   `:vne [filename]`
 
 Move between windows
 
-*   `Ctrl-W [hjkl]`
+*   `ctrl-w [hjkl]`
+*   `ctrl-w p` (previous)
+
+Resize windows
+
+*   `ctrl-w -` (decrease height)
+*   `ctrl-w +` (increase height)
+*   `ctrl-w <` (decrease width)
+*   `ctrl-w >` (increase width)
+*   `ctrl-w _` (max height)
+*   `ctrl-w |` (max width)
+*   `ctrl-w =` (make windows equally wide and high)
+*   `:res [n]`, `:res [+n]`, `:res [-n]`, `:vertical resize ...`
+
+[tinymode key maps](http://www.vim.org/scripts/script.php?script_id=2223)
+
+>   You can use ^W++- instead of ^W+^W+^W-
+
+```vimL
+nmap          <C-W>+     <C-W>+<SID>ws
+nmap          <C-W>-     <C-W>-<SID>ws
+nmap          <C-W><     <C-W><<SID>ws
+nmap          <C-W>>     <C-W>><SID>ws
+nn <script>   <SID>ws+   <C-W>+<SID>ws
+nn <script>   <SID>ws-   <C-W>-<SID>ws
+nn <script>   <SID>ws>   <C-W>><SID>ws
+nn <script>   <SID>ws<   <C-W><<SID>ws
+nmap          <SID>ws    <Nop>
+```
+
+Rotate windows
+
+*   `ctrl-w r`, `ctrl-w R`
+
+Change layout
+
+*   `ctrl-w [HJKL]` (move current window)
+*   `ctrl-w T` (move current window to new tab)
 
 Delete window
 
 *   `:q`
 
-### file explorer
+Extensions
+----------
+
+### unite
+
+*   File search
+*   Buffer search
+
+[TODO]
+
+### vimfiler
 
 [vimfiler help](https://github.com/Shougo/vimfiler.vim/blob/master/doc/vimfiler.txt)
 

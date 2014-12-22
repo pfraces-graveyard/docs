@@ -1,31 +1,37 @@
 IDE requirements
 ================
 
-What I expect from an IDE?
---------------------------
+Layout
+------
 
-### File capabilities
+*   Multiple views
+*   Multiple tabs
 
-*   reindent
+Edit
+----
+
+*   copy / paste
+*   find / replace
+*   wrap / unwrap
+*   indentation
 *   syntax highlight
-*   line numbers
-*   wrap / unwrap line content into visible area
 *   multicursor
 
-### Project integration
+Project integration
+-------------------
 
 *   file browser
-*   tabs and layouts
 *   embeded shells
 *   find / replace at project level
-
-### Tools integration
-
 *   autocomplete at project level
-*   linter integration
-*   debug with breakpoints
+*   linter
+*   debugger
+*   coding style
 
-### Productivity
+Productivity
+------------
 
+*   motions / bookmarks
+*   commands
 *   key bindings
 *   snippets
