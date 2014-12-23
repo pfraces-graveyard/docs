@@ -1,18 +1,18 @@
-Use vim like an ide
+use vim like an ide
 ===================
 
 *   [use vim like an IDE](http://vim.wikia.com/wiki/Use_Vim_like_an_IDE)
 *   [buffers vs tabs](https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/)
 *   [buffers](http://vim.wikia.com/wiki/Buffers)
 
-Layout
+layout
 ------
 
 >   A buffer is the in-memory text of a file.
     A window is a viewport on a buffer.
     A tab page is a collection of windows.
 
-### Buffers
+### buffers
 
 *   `:e filename` create a new buffer
 *   `:bad filename` create a hidden buffer
@@ -22,7 +22,7 @@ Layout
 
 [TODO] Delete buffer without closing its containing window
 
-### Windows
+### windows
 
 Create a new window
 
@@ -145,11 +145,9 @@ let g:vimfiler_as_default_explorer = 1
 
 ### usage
 
-[vimfiler help](https://github.com/Shougo/vimfiler.vim/blob/master/doc/vimfiler.txt)
-
-Open vimfiler
-
     :VimFiler
+
+[vimfiler help](https://github.com/Shougo/vimfiler.vim/blob/master/doc/vimfiler.txt)
 
 Normal mode default mappings
 
