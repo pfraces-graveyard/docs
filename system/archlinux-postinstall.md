@@ -1,24 +1,13 @@
 Archlinux postinstall
 =====================
 
-Gvim
-----
-
-    sudo pacman -S --noconfirm gvim
-
-Config: https://github.com/pfraces-wip/doc/blob/master/system/gvim.md
-
-Git
----
-
-    sudo pacman -S --noconfirm git
-
-Config: https://github.com/pfraces-wip/doc/blob/master/system/git.md
-
 Install utilities
 -----------------
 
     sudo packer -S --noconfirm \
+      tmux \
+      gvim \
+      git \
       bash-completion \
       downgrade \
       the_silver_searcher \

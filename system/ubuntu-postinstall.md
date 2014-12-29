@@ -33,17 +33,16 @@ Source: http://askubuntu.com/a/68023
 Install utilities (using synaptic)
 ----------------------------------
 
-*   vim-gtk
-*   git
-*   meld
-*   chromium-browser
-*   pepperflashplugin-nonfree
-*   silversearcher-ag
-*   xclip
-*   htop
-*   skype
-*   wireshark
-*   gpick
+    sudo apt-get install \
+        tmux \
+        vim-gtk \
+        git \
+        silversearcher-ag \
+        chromium-browser \
+        pepperflashplugin-nonfree \
+        meld \
+        xclip \
+        gpick
 
 Install utilities (from PPAs)
 -----------------------------
@@ -65,52 +64,6 @@ Source: https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manag
     sudo apt-get install sublime-text-installer
 
 Source: http://www.webupd8.org/2013/07/sublime-text-3-ubuntu-ppa-now-available.html
-
-Change number of workspaces
----------------------------
-
-Install unity-tweak-tool
-
-    sudo apt-get install unity-tweak-tool
-
-Edit the number of workspaces in:
-
-    Window Manager > Workspace Settings
-
-Source: http://askubuntu.com/a/108306
-
-Remove 'show desktop' from window switcher
-------------------------------------------
-
-*(Ignore this step if you are going to disable window grouping as shown below)*
-
-Install unity-tweak-tool
-
-    sudo apt-get install unity-tweak-tool
-
-Disable 'show desktop'
-
-    Unity > Switcher > Display "Show Desktop" icon
-
-Source: http://askubuntu.com/a/174457
-
-Disable window grouping in window switcher
-------------------------------------------
-
-    sudo apt-get install compizconfig-settings-manager
-    sudo apt-get install compiz-plugins
-    ccsm
-
-*   Disable the keyboard shortcuts for Unity's switcher by unchecking:
-
-        Desktop > Ubuntu Unity Plugin > Switcher > Key to start the switcher > Enabled
-        Desktop > Ubuntu Unity Plugin > Switcher > Key to start the switcher in reverse > Enabled
-
-*   Enable the Static Application Switcher by checking:
-
-        Window Management > Static Application Switcher > Enable Static Application Switcher
-
-Source: http://askubuntu.com/questions/68151
 
 Install grip - github readme instant preview
 --------------------------------------------
@@ -137,3 +90,49 @@ Specifically render GitHub-Flavored Markdown, optionally with repo context:
     grip --gfm --context=username/repo issue.md
 
 Source: http://stackoverflow.com/a/13781363/1815446
+
+Unity customization
+-------------------
+
+### Change number of workspaces
+
+Install unity-tweak-tool
+
+    sudo apt-get install unity-tweak-tool
+
+Edit the number of workspaces in:
+
+    Window Manager > Workspace Settings
+
+Source: http://askubuntu.com/a/108306
+
+### Remove 'show desktop' from window switcher
+
+*(Ignore this step if you are going to disable window grouping as shown below)*
+
+Install unity-tweak-tool
+
+    sudo apt-get install unity-tweak-tool
+
+Disable 'show desktop'
+
+    Unity > Switcher > Display "Show Desktop" icon
+
+Source: http://askubuntu.com/a/174457
+
+### Disable window grouping in window switcher
+
+    sudo apt-get install compizconfig-settings-manager
+    sudo apt-get install compiz-plugins
+    ccsm
+
+*   Disable the keyboard shortcuts for Unity's switcher by unchecking:
+
+        Desktop > Ubuntu Unity Plugin > Switcher > Key to start the switcher > Enabled
+        Desktop > Ubuntu Unity Plugin > Switcher > Key to start the switcher in reverse > Enabled
+
+*   Enable the Static Application Switcher by checking:
+
+        Window Management > Static Application Switcher > Enable Static Application Switcher
+
+Source: http://askubuntu.com/questions/68151

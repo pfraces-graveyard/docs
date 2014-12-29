@@ -42,12 +42,6 @@ nnoremap n nzz
 nnoremap N Nzz
 
 "
-" hide menu bars
-"
-set guioptions-=m
-set guioptions-=T
-
-"
 " linenumbers
 "
 set number
