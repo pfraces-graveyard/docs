@@ -65,17 +65,40 @@ TODO
 
 ### bugs
 
-*   backquote is not shown under st
+*   accented chars are not shown under st
+
+    WORKAROUND: It works with the english keyboard layout
+
+        Glyph             | Spanish layout
+        ------------------|---------------
+        ` (backquote)     | \
+        ^ (caret)         | &
+
+    Other useful relations between spanish and english layouts
+
+        Glyph             | Spanish layout
+        ------------------|---------------
+        * (star)          | (
+        - (hyphen)        | '
+        _ (underscore)    | ?
+        / (slash)         | -
+        ? (question mark) | _
+        \ (backslash)     | ç
+        | (pipe)          | Ç
+        ; (semicolon)     | ñ
+        : (colon)         | Ñ
+
 *   escape key takes too much time
 
 ### integration
 
-*   [DONE] start tmux automatically when using st
+*   [DONE] start tmux automatically from bash
 *   tmux powerline (tmuxline?)
 *   add shortcut to launch st (win+return?)
 *   vim: remap caps lock to escape
 *   vim reload: autoload .vimrc when saved
 *   tmux reload: load .tmux.conf settings with a key mapping
+*   cohesive key mappings in vim and tmux
 
 ### tmux config
 *   remap Ctrl-b to Ctrl-a
@@ -107,6 +130,6 @@ TODO
 *   improve vimrecover bash function: store backup files in the same place or
     disable backups at all (can tmux recover a crashed session?)
 *   remove graphical vim tweaks from documentation
-*   check if its needed to replace default terminal with tmux
+*   check if its needed to replace default terminal in st when using tmux
 *   remove xterm info if st is suitable enough
 *   test and update git integration

@@ -5,6 +5,11 @@ use vim like an ide
 *   [buffers vs tabs](https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/)
 *   [buffers](http://vim.wikia.com/wiki/Buffers)
 
+reload config
+-------------
+
+`:so ~/.vimrc`
+
 layout
 ------
 
@@ -99,13 +104,38 @@ Look for a valid font path with `xset q`
     cd ~/.config/fontconfig/conf.d/
     wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
 
-command launcher: unite
------------------------
+launcher: unite
+---------------
 
     cd ~/.vim/bundle
     git clone https://github.com/Shougo/unite.vim
 
-[TODO]
+[unite intro](http://bling.github.io/blog/2013/06/02/unite-dot-vim-the-plugin-you-didnt-know-you-need/)
+
+To use the async flag, vimproc is required
+
+    cd ~/.vim/bundle
+    git clone https://github.com/Shougo/vimproc.vim
+    cd vimproc.vim
+    make
+
+### config
+
+```vimL
+" file searching like ctrlp.vim
+nnoremap <C-p> :Unite file_rec/async<cr>
+```
+
+### usage
+
+*   open unite: `:Unite <filter>`
+
+*   filters
+    *   `file_rec`: recursively search for files under current directory
+
+*   close unite: (from NORMAL mode) `:q`
+*   filter results: enter into INSERT mode
+*   open selection in current window: `[Enter]`
 
 file explorer: vimfiler
 -----------------------
@@ -113,6 +143,8 @@ file explorer: vimfiler
     cd ~/.vim/bundle
     git clone https://github.com/Shougo/unite.vim
     git clone https://github.com/Shougo/vimfiler.vim
+
+[vimfiler help](https://github.com/Shougo/vimfiler.vim/blob/master/doc/vimfiler.txt)
 
 ### config
 
@@ -145,9 +177,9 @@ let g:vimfiler_as_default_explorer = 1
 
 ### usage
 
-    :VimFiler
-
-[vimfiler help](https://github.com/Shougo/vimfiler.vim/blob/master/doc/vimfiler.txt)
+*   toggle vimfiler: `:VimFiler`
+*   collapse/down/up/expand: `hjkl`
+*   mark/unmark entry: `[Space]`
 
 Normal mode default mappings
 
