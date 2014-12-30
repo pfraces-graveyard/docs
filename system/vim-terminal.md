@@ -70,9 +70,16 @@ TODO
 
 ### integration
 
-*   start tmux automatically when using st
+*   [DONE] start tmux automatically when using st
 *   tmux powerline (tmuxline?)
 *   add shortcut to launch st (win+return?)
+*   vim: remap caps lock to escape
+*   vim reload: autoload .vimrc when saved
+*   tmux reload: load .tmux.conf settings with a key mapping
+
+### tmux config
+*   remap Ctrl-b to Ctrl-a
+*   windows ids relatives to 1
 
 ### vim config
 
@@ -82,7 +89,18 @@ TODO
 *   change cursor: block in normal, pipe in insert
 *   key map to switch line numbers on and off
 *   do not save backup files (check tmux can recover a session first)
-*   add vim plugins (unite, ...)
+
+### vim plugins
+
+*   unite
+
+### vim language detection
+
+*   markdown
+*   javascript
+*   html
+*   css
+*   lesss
 
 ### update documentation
 
