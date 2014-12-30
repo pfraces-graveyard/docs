@@ -26,13 +26,6 @@ key mappings
 *   command mode: `Ctrl-b :` (exit with `[Esc]`)
 *   scroll mode: `Ctrl-b [` (exit with `q`)
 
-### panes
-
-*   split pane vertical: `Ctrl-b %`
-*   split pane horizontal: `Ctrl-b "`
-*   move between panes: `Ctrl-b [Left|Right|Up|Down]`
-*   resize panes: `Ctrl-b Ctrl-[Left|Right|Up|Down]`
-
 ### windows
 
 *   new window: `Ctrl-b c`
@@ -43,33 +36,27 @@ key mappings
 *   swap windows: `swap-window -s 3 -t 1`
 *   swap current window: `swap-window -t 0`
 
-### layout
+### panes
 
-Tmux has several layout presets (use `Ctrl-b [Space]` to switch between them)
+*   split pane vertical: `Ctrl-b %`
+*   split pane horizontal: `Ctrl-b "`
+*   move between panes: `Ctrl-b [Left|Right|Up|Down]`
+*   resize panes: `Ctrl-b Ctrl-[Left|Right|Up|Down]`
+*   swap panes: `Ctrl-b o`
 
-**Meta** is `[Alt]` on my system
+#### layout
 
-#### Even vertical
+Tmux has several layout presets. (**Meta** is `[Alt]` on my system)
 
-`Ctrl-b Meta-1`: vertical split, all panes same width
-
-#### Even horizontal
-
-`Ctrl-b Meta-2`: horizontal split, all panes same height
-
-#### Main horizontal
-
-`Ctrl-b Meta-3`: horizontal split, main pane on top, other panes on bottom,
-vertically split, all same width
-
-#### Main vertical
-
-`Ctrl-b Meta-4`: vertical split, main pane left, other panes right,
-horizontally split, all same height
-
-#### Tiled
-
-`Ctrl-b Meta-5`: tile, new panes on bottom, same height before same width
+*   `Ctrl-b [Space]`: switch between them)
+*   `Ctrl-b Meta-1`: (even vertical) vertical split, all panes same width
+*   `Ctrl-b Meta-2`: (Even horizontal) horizontal split, all panes same height
+*   `Ctrl-b Meta-3`: (Main horizontal) horizontal split, main pane on top,
+    other panes on bottom, vertically split, all same width
+*   `Ctrl-b Meta-4`: (Main vertical) vertical split, main pane left, other
+    panes right, horizontally split, all same height
+*   `Ctrl-b Meta-5`: (Tiled) tile, new panes on bottom, same height before
+    same width
 
 system integration
 ------------------
