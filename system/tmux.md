@@ -35,6 +35,7 @@ key mappings
 *   rename window: `Ctrl-b ,`
 *   swap windows: `swap-window -s 3 -t 1`
 *   swap current window: `swap-window -t 0`
+*   rotate window: `Ctrl-b Ctrl-o`
 
 ### panes
 
@@ -42,7 +43,6 @@ key mappings
 *   split pane horizontal: `Ctrl-b "`
 *   move between panes: `Ctrl-b [Left|Right|Up|Down]`
 *   resize panes: `Ctrl-b Ctrl-[Left|Right|Up|Down]`
-*   swap panes: `Ctrl-b o`
 
 #### layout
 
