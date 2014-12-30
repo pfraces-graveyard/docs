@@ -69,38 +69,45 @@ TODO
 
     WORKAROUND: It works with the english keyboard layout
 
-        Glyph             | Spanish layout
-        ------------------|---------------
-        ` (backquote)     | \
-        ^ (caret)         | &
+        Glyph              | Spanish layout
+        -------------------|---------------
+        ` (backquote)      | \
+        ^ (caret)          | &
 
     Other useful relations between spanish and english layouts
 
-        Glyph             | Spanish layout
-        ------------------|---------------
-        * (star)          | (
-        - (hyphen)        | '
-        _ (underscore)    | ?
-        / (slash)         | -
-        ? (question mark) | _
-        \ (backslash)     | ç
-        | (pipe)          | Ç
-        ; (semicolon)     | ñ
-        : (colon)         | Ñ
+        Glyph              | Spanish layout
+        -------------------|---------------
+        * (star)           | (
+        - (hyphen)         | '
+        _ (underscore)     | ?
+        / (slash)          | -
+        ? (question mark)  | _
+        \ (backslash)      | ç
+        | (pipe)           | Ç
+        ; (semicolon)      | ñ
+        : (colon)          | Ñ
+        [ (square bracket) | `
+        ] (square bracket) | +
+        { (left bracket)   | ^
+        } (right bracket)  | *
+        = (equal)          | ¡
+        + (plus)           | ¿
 
 *   escape key takes too much time
 
 ### integration
 
 *   [DONE] start tmux automatically from bash
-*   tmux powerline (tmuxline?)
 *   add shortcut to launch st (win+return?)
-*   vim: remap caps lock to escape
-*   vim reload: autoload .vimrc when saved
-*   tmux reload: load .tmux.conf settings with a key mapping
+*   remap caps lock to escape
 *   cohesive key mappings in vim and tmux
 
 ### tmux config
+
+*   powerline (tmuxline?)
+*   statusbar hints when hidden pane logs anything
+*   reload: load .tmux.conf settings with a key mapping
 *   remap Ctrl-b to Ctrl-a
 *   windows ids relatives to 1
 
@@ -112,6 +119,7 @@ TODO
 *   change cursor: block in normal, pipe in insert
 *   key map to switch line numbers on and off
 *   do not save backup files (check tmux can recover a session first)
+*   autoload .vimrc when saved
 
 ### vim plugins
 
