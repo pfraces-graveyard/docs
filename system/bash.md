@@ -39,7 +39,7 @@ Misc aliases
 alias sudo='sudo '
 alias ls='ls --color=auto'
 alias find='find . -name'
-alias ag='ag --smart-case'
+alias ag='ag --smart-case --pager="less -R"'
 ```
 
 Misc functions

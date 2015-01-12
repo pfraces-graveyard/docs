@@ -16,10 +16,22 @@ Install plugins
 
 *   sublimelinter
 *   sublimelinter jshint
-*   soda theme
 *   emmet
 *   docblockr
 *   tern for sublime: follow instructions at https://github.com/marijnh/tern_for_sublime
+
+#### soda dark theme
+
+    cd ~/.config/sublime-text-3/Packages
+    git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
+
+Edit user preferences (`Preferences > Settings - User`)
+
+```json
+{
+  "theme": "Soda Dark 3.sublime-theme"
+}
+```
 
 Configuration
 -------------
