@@ -74,6 +74,14 @@ Reindent current buffer (`Preferences > Key Bindings - User`)
 }
 ```
 
+### 80 chars indicator
+
+```json
+{
+  "rulers": [80]
+}
+```
+
 ### Tern
 
 ```json

@@ -33,6 +33,15 @@ set -g base-index 1
 setw -g pane-base-index 1
 ```
 
+### mouse support
+
+```
+setw -g mode-mouse on
+set -g mouse-select-pane on
+set -g mouse-resize-pane on
+set -g mouse-select-window on
+```
+
 ### clear scrollback buffer
 
 Clear tmux scroll and clean screen with a single command
