@@ -5,6 +5,13 @@ tmux
 *   [archlinux wiki](https://wiki.archlinux.org/index.php/tmux)
 *   [tmux crash course](http://robots.thoughtbot.com/a-tmux-crash-course)
 
+TODO
+----
+
+*   copy to clipboard with mouse selection
+*   paste from clipboard with mouse middle button
+*   reorder window ids when destroying one of them
+
 config
 ------
 

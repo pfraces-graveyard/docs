@@ -60,6 +60,13 @@ In `~/.tmux.conf
 
     set -g default-terminal "screen-256color"
 
+### vim
+
+In `~/.vimrc`
+
+    "mouse support from terminal
+    set mouse=a
+
 TODO
 ----
 

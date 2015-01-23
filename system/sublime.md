@@ -33,6 +33,15 @@ Edit user preferences (`Preferences > Settings - User`)
 }
 ```
 
+### SublimePrint
+
+1.  Install enscript `sudo apt-get install enscript`
+2.  Open the **command pallete** (`Ctrl+Shift+P`)
+3.  Type `install` and select `Package Control: Install Package`
+4.  Search for `simple print function`
+5.  Configure it at: `Preferences > Package Settings > SublimePrint`
+    *   available printers and default printers are in the user configuration
+
 Configuration
 -------------
 
