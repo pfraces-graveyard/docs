@@ -16,8 +16,6 @@ Install plugins
 
 *   sublimelinter
 *   sublimelinter jshint
-*   emmet
-*   docblockr
 *   tern for sublime: follow instructions at https://github.com/marijnh/tern_for_sublime
 
 #### soda dark theme
