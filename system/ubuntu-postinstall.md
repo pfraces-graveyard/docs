@@ -91,16 +91,23 @@ Specifically render GitHub-Flavored Markdown, optionally with repo context:
 
 Source: http://stackoverflow.com/a/13781363/1815446
 
-Unity customization
--------------------
+Ubuntu config
+-------------
 
-### Change number of workspaces
+### Avoid double-typing password in lock screen
+
+    Settings -> Brightness and Lock -> Lock [OFF]
+
+Source: http://simionbaws.ro/linux/ubuntu-14-04-lock-screen-asking-password-twice/
+
+Unity config
+------------
 
 Install unity-tweak-tool
 
     sudo apt-get install unity-tweak-tool
 
-Edit the number of workspaces in:
+### Change number of workspaces
 
     Window Manager > Workspace Settings
 
@@ -109,12 +116,6 @@ Source: http://askubuntu.com/a/108306
 ### Remove 'show desktop' from window switcher
 
 *(Ignore this step if you are going to disable window grouping as shown below)*
-
-Install unity-tweak-tool
-
-    sudo apt-get install unity-tweak-tool
-
-Disable 'show desktop'
 
     Unity > Switcher > Display "Show Desktop" icon
 
