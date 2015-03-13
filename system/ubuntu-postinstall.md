@@ -65,6 +65,14 @@ Source: https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manag
 
 Source: http://www.webupd8.org/2013/07/sublime-text-3-ubuntu-ppa-now-available.html
 
+### atom
+
+    sudo add-apt-repository ppa:webupd8team/atom
+    sudo apt-get update
+    sudo apt-get install atom
+    
+Source: http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html
+
 Install grip - github readme instant preview
 --------------------------------------------
 
