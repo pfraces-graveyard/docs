@@ -164,9 +164,11 @@ Aliases
 **~/.bashrc**
 
 ```bash
-alias save!='allow_master=true save'
 alias g='save'
-alias g!='save!'
+alias g!='allow_master=true save'
+
+alias gqb='git rev-parse --abbrev-ref HEAD 2>/dev/null'
+alias gqr='git rev-parse --show-toplevel'
 
 alias ga='git add --all'
 alias gaz='git reset'
@@ -174,7 +176,7 @@ alias gb='git checkout -b'
 alias gbm='git checkout master && git pull origin master'
 alias gc='git add --all && git commit'
 alias gd='git diff'
-alias gdg='(meld $(git rev-parse --show-toplevel)/src &)'
+alias gdg='(meld $(gqr)/src &)'
 alias gdz='git reset --hard'
 alias gi='git update-index --assume-unchanged'
 alias gil='git ls-files -v | grep "^[[:lower:]]"'
@@ -182,6 +184,7 @@ alias giz='git update-index --no-assume-unchanged'
 alias gk='find . -type d -empty -exec touch {}/.keep \;'
 alias gl='git log --oneline --decorate --graph'
 alias gm='git mergetool'
+alias gp='git push origin $(gqb)'
 alias gr='git remote -v'
 alias gs='git status'
 alias gu='git pull origin master'
