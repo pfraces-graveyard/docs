@@ -126,7 +126,8 @@ Source: https://i3wm.org/docs/repositories.html
         suckless-tools \
         lxappearance \
         scrot \
-        feh
+        feh \
+        gsimplecal
 
 **Note:** `suckless-tools` is needed for `dmenu`
 
