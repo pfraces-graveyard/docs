@@ -164,6 +164,10 @@ Source: http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-pp
 
 Source: http://stackoverflow.com/a/13781363/1815446
 
+### thunar
+
+    sudo apt-get install thunar gnome-icon-theme-full
+
 Unity setup
 -----------
 
