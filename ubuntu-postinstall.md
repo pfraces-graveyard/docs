@@ -15,6 +15,7 @@ Install utilities
         stterm \
         tmux \
         git \
+        gitg \
         silversearcher-ag \
         meld \
         xclip \
