@@ -134,13 +134,10 @@ Source: https://i3wm.org/docs/repositories.html
 
 ### nodejs
 
-    sudo apt-get update
-    sudo apt-get install -y python-software-properties python g++ make
-    sudo add-apt-repository ppa:chris-lea/node.js
-    sudo apt-get update
-    sudo apt-get install nodejs
+    curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
+    sudo apt-get install -y nodejs
 
-Source: https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager#ubuntu-mint-elementary-os
+Source: https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories
 
 ### sublime text 3
 
