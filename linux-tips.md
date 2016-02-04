@@ -55,3 +55,8 @@ mount device
 
     watch --interval 3 --differences 'ls -lt /dev/sd*'
     sudo mount -t <vfat|ntfs|...> <device> /mnt
+
+markdown to textile
+-------------------
+
+    cat | pandoc -t textile | xclip
