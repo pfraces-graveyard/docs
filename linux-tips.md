@@ -59,4 +59,4 @@ mount device
 markdown to textile
 -------------------
 
-    cat | pandoc -t textile | xclip
+    pandoc -f markdown -t textile
