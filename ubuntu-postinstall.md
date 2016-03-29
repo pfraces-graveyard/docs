@@ -166,6 +166,8 @@ Source: http://stackoverflow.com/a/13781363/1815446
 
     sudo apt-get install thunar gnome-icon-theme-full
 
+  * [Replace Nautilus with Thunar](http://ubuntuguide.net/install-thunar-file-browser-and-make-default-in-gnome)
+
 Unity setup
 -----------
 
