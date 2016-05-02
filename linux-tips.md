@@ -60,3 +60,49 @@ markdown to textile
 -------------------
 
     pandoc -f markdown -t textile
+
+
+Detect USB device
+-----------------
+
+    sudo fdisk -l
+
+Format USB
+----------
+
+    sudo umount /dev/sd{x}1
+
+### `mkfs`
+
+You can format your USB disk using `mkfs`
+
+#### FAT
+
+    sudo mkfs.vfat -n 'device name' -I /dev/sdc1
+
+#### NTFS
+
+    sudo mkfs.ntfs -I /dev/sdc1
+
+#### EXT4
+
+    sudo mkfs.ext4 -n  -I /dev/sdc1
+
+### wipe out
+
+You can also use following commands to completely wipe out the whole USB flash drive
+
+#### use `shred`
+
+    sudo shred /dev/sdc1
+
+#### or `dd`
+
+    sudo dd if=/dev/zero of=/dev/sdc1
+
+Reference: <http://en.proft.me/2015/08/25/how-format-usb-arch-linuxubuntu-command-line/>
+
+ISO to USB
+----------
+
+    sudo dd bs=4M if=/path/to/file.iso of=/dev/sd{x} && sync
