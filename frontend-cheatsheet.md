@@ -28,10 +28,10 @@ jshint
 console.log('foo'); // jshint ignore:line
 ```
 
-bootstrap css
--------------
+Bootstrap 3
+-----------
 
-bootstrap 3 mobile first breakpoints
+Mobile first breakpoints
 
 ```css
 /* Custom, iPhone Retina */ 
@@ -49,6 +49,13 @@ bootstrap 3 mobile first breakpoints
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) { }
 ```
+
+Grid Sizes
+
+  * `xs` - for the smallest screen widths like smartphones >= 480 px
+  * `sm` - for small screen widths like smartphones and tablets >= 768 px
+  * `md` - for medium screen widths like tablets and laptops >= 992 px
+  * `lg` - for large screen widths like desktops >= 1200 px
 
 angular
 -------
