@@ -1,6 +1,55 @@
 frontend cheatsheet
 ===================
 
+eslint
+------
+
+### rules
+
+<http://eslint.org/docs/rules/>
+
+### ignore line
+
+```js
+console.log('foo'); // eslint-disable-line
+```
+<http://eslint.org/docs/user-guide/configuring.html#configuring-rules>
+
+jshint
+------
+
+### rules
+
+<http://jshint.com/docs/options/>
+
+### ignore line
+
+```js
+console.log('foo'); // jshint ignore:line
+```
+
+bootstrap css
+-------------
+
+bootstrap 3 mobile first breakpoints
+
+```css
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) { }
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) { }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) { }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) { }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) { }
+```
+
 angular
 -------
 
@@ -41,30 +90,3 @@ ctrl('myCtrl', 'vm').exposedFunction(); // ng-controller="myCtrl as vm"
 ```
 
 Reference: <http://stackoverflow.com/a/13744085/1815446>
-
-eslint
-------
-
-### rules
-
-<http://eslint.org/docs/rules/>
-
-### ignore line
-
-```js
-console.log('foo'); // eslint-disable-line
-```
-<http://eslint.org/docs/user-guide/configuring.html#configuring-rules>
-
-jshint
-------
-
-### rules
-
-<http://jshint.com/docs/options/>
-
-### ignore line
-
-```js
-console.log('foo'); // jshint ignore:line
-```
