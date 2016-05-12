@@ -72,7 +72,7 @@ window.require = function (service) {
 ### scope updates from devtools
 
 ```js
-window.scope = function (element) 
+window.scope = function (element) {
   var $scope = angular.element(element).scope();
   setTimeout($scope.$apply.bind($scope), 0);
   return $scope;
