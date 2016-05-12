@@ -69,6 +69,22 @@ window.require = function (service) {
 };
 ```
 
+### scope updates from devtools
+
+```js
+window.scope = function (element) 
+  var $scope = angular.element(element).scope();
+  setTimeout($scope.$apply.bind($scope), 0);
+  return $scope;
+};
+```
+
+Usage
+
+```js
+scope($0).title = 'foo';
+```
+
 ### controller scope from devtools
 
 **Using $0**
