@@ -89,6 +89,19 @@ Source: http://askubuntu.com/a/68023
 
 Source: https://gist.github.com/akolosov/cedaac86b333a4ced95f
 
+### neovim
+
+    sudo add-apt-repository ppa:neovim-ppa/unstable
+    sudo apt-get update
+    sudo apt-get install neovim
+    
+Python modules
+
+    sudo apt-get install python-dev python-pip python3-dev python3-pip
+    pip install --upgrade --user neovim
+
+Source: <https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu>
+
 ### Chromium
 
     sudo apt-get install \
