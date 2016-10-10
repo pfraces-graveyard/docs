@@ -17,7 +17,8 @@ Install utilities
         silversearcher-ag \
         meld \
         xclip \
-        gpick
+        gpick \
+        mousepad
 
 ### Terminal multiplexer
 
