@@ -222,3 +222,14 @@ Edit `/usr/share/dbus-1/services/org.freedesktop.Notifications.service`:
   * with: `Exec=/usr/lib/notification-daemon/notification-daemon`
 
 Source: http://ubuntuforums.org/showthread.php?t=1663840
+
+Mate setup
+----------
+
+    sudo apt-get install --no-install-recommends ubuntu-mate-core
+    sudo apt-get install --no-install-recommends ubuntu-mate-desktop
+
+  > Then log into the MATE session and use MATE Tweak to switch away from, and then back to, the "Ubuntu MATE" interface.
+  > Then Enable Indicators from MATE Tweak
+
+Source https://ubuntu-mate.community/t/how-to-replace-unity-by-mate-in-ubuntu-xenial-16-04/5054/4
