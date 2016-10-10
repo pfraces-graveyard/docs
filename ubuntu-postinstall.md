@@ -21,6 +21,13 @@ Install utilities
         xclip \
         gpick
 
+### Terminal multiplexer
+
+Choose one of the following:
+
+  *  `sudo apt-get install stterm tmux`
+  *  `sudo apt-get install terminator`
+
 ### Synaptic
 
     sudo apt-get install synaptic
