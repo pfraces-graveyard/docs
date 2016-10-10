@@ -99,7 +99,7 @@ Source: https://i3wm.org/docs/repositories.html
 ### nodejs
 
     curl -sL https://deb.nodesource.com/setup_4.x | sudo bash -
-    sudo apt-get install -y nodejs
+    sudo apt-get install nodejs
 
 Source: https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories
 
