@@ -12,8 +12,6 @@ Install utilities
 -----------------
 
     sudo apt-get install \
-        stterm \
-        tmux \
         git \
         gitg \
         silversearcher-ag \
