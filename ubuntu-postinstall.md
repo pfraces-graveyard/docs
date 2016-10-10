@@ -23,8 +23,8 @@ Install utilities
 
 Choose one of the following:
 
-  *  `sudo apt-get install stterm tmux`
-  *  `sudo apt-get install terminator`
+  * `sudo apt-get install stterm tmux`
+  * `sudo apt-get install terminator`
 
 ### Synaptic
 
