@@ -1,4 +1,4 @@
-Ubuntu (14.04) Postinstall
+Ubuntu (16.04) Postinstall
 ===========================
 
 System upgrade
@@ -61,10 +61,11 @@ Source: <https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu>
 
 **Extensions**
 
-  * Adblock Plus
+  * Adblock Plus / uBlock Origin
+  * Hide My AdBlocker
   * Postman
   * Web Developer Form Filler
-  * Webpage Screenshot
+  * Screenshot Webpages
 
 ### Unity
 
