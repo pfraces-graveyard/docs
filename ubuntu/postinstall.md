@@ -13,9 +13,9 @@ Desktop Environment
 
 There are specific documentation for tested desktop environments
 
-  * [Unity](ubuntu/unity.md)
-  * [i3](ubuntu/i3.md)
-  * [Mate](ubuntu/mate.md)
+  * [Unity](unity.md)
+  * [i3](i3.md)
+  * [Mate](mate.md)
 
 Install utilities
 -----------------
