@@ -8,64 +8,14 @@ System upgrade
     sudo apt-get upgrade
     sudo apt-get autoremove
 
-Install utilities
------------------
+Desktop Environment
+-------------------
 
-    sudo apt-get install \
-        git \
-        gitg \
-        silversearcher-ag \
-        meld \
-        xclip \
-        gpick \
-        mousepad
+There are specific documentation for tested desktop environments
 
-### Terminal multiplexer
-
-Choose one of the following: 
-
-  * `sudo apt-get install stterm tmux`
-  * `sudo apt-get install terminator`
-
-### Synaptic
-
-    sudo apt-get install synaptic
-    sudo apt-get install gksu
-    cp /usr/share/applications/synaptic.desktop ~/.local/share/applications
-
-Edit `~/.local/share/applications`
-
-    Exec=gksudo synaptic-pkexec
-
-Source: http://askubuntu.com/a/68023
-
-### neovim
-
-    sudo add-apt-repository ppa:neovim-ppa/unstable
-    sudo apt-get update
-    sudo apt-get install neovim
-    
-Python modules
-
-    sudo apt-get install python-dev python-pip python3-dev python3-pip
-    pip install --user neovim
-    pip3 install --user neovim
-
-Source: <https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu>
-
-### Chromium
-
-    sudo apt-get install \
-        chromium-browser \
-        pepperflashplugin-nonfree
-
-**Extensions**
-
-  * Adblock Plus / uBlock Origin
-  * Hide My AdBlocker
-  * Postman
-  * Web Developer Form Filler
-  * Screenshot Webpages
+  * [Unity](ubuntu/unity.md)
+  * [i3](ubuntu/i3.md)
+  * [Mate](ubuntu/mate.md)
 
 ### Unity
 
@@ -85,7 +35,7 @@ Source: <https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu>
 
 Source: https://i3wm.org/docs/repositories.html
 
-### i3 desktop environment
+#### i3 tools
 
     sudo apt-get install \
         i3lock \
@@ -97,14 +47,93 @@ Source: https://i3wm.org/docs/repositories.html
 
 **Note:** `suckless-tools` is needed for `dmenu`
 
-### nodejs
+Install utilities
+-----------------
+
+    sudo apt-get install \
+        git \
+        gitg \
+        silversearcher-ag \
+        meld \
+        xclip \
+        gpick \
+        mousepad
+
+### Synaptic
+
+    sudo apt-get install synaptic
+    sudo apt-get install gksu
+    cp /usr/share/applications/synaptic.desktop ~/.local/share/applications
+
+Edit `~/.local/share/applications`
+
+    Exec=gksudo synaptic-pkexec
+
+Source: http://askubuntu.com/a/68023
+
+### Chromium
+
+    sudo apt-get install \
+        chromium-browser \
+        pepperflashplugin-nonfree
+
+**Extensions**
+
+  * Adblock Plus / uBlock Origin
+  * Hide My AdBlocker
+  * Postman
+  * Web Developer Form Filler
+  * Screenshot Webpages
+
+### NodeJS
 
     curl -sL https://deb.nodesource.com/setup_4.x | sudo bash -
     sudo apt-get install nodejs
 
 Source: https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories
 
-### sublime text 3
+### Z
+
+    Z_PATH=$HOME/alien/z/z.sh
+    curl -fLo $Z_PATH --create-dirs https://raw.githubusercontent.com/rupa/z/master/z.sh
+    echo "source $Z_PATH" >> ~/.bashrc
+
+### Grip
+
+    sudo apt-get install python-pip
+    sudo pip install grip
+
+Source: http://stackoverflow.com/a/13781363/1815446
+
+Terminal multiplexer
+--------------------
+
+### St
+
+    sudo apt-get install stterm tmux
+
+### Terminator
+
+    sudo apt-get install terminator
+
+Text editor
+-----------
+
+### Neovim
+
+    sudo add-apt-repository ppa:neovim-ppa/unstable
+    sudo apt-get update
+    sudo apt-get install neovim
+    
+Python modules
+
+    sudo apt-get install python-dev python-pip python3-dev python3-pip
+    pip install --user neovim
+    pip3 install --user neovim
+
+Source: <https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu>
+
+### Sublime text 3
 
     sudo add-apt-repository ppa:webupd8team/sublime-text-3
     sudo apt-get update
@@ -112,7 +141,7 @@ Source: https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-re
 
 Source: http://www.webupd8.org/2013/07/sublime-text-3-ubuntu-ppa-now-available.html
 
-### atom
+### Atom
 
     sudo add-apt-repository ppa:webupd8team/atom
     sudo apt-get update
@@ -120,14 +149,14 @@ Source: http://www.webupd8.org/2013/07/sublime-text-3-ubuntu-ppa-now-available.h
 
 Source: http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html
 
-### grip
+File manager
+------------
 
-    sudo apt-get install python-pip
-    sudo pip install grip
+### Nautilus
 
-Source: http://stackoverflow.com/a/13781363/1815446
+It comes with the Unity desktop environment by default
 
-### thunar
+### Thunar
 
     sudo apt-get install thunar gnome-icon-theme-full
 
