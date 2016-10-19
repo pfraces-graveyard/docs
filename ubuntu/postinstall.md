@@ -98,6 +98,11 @@ Text editor
 
 Source: http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html
 
+#### Install plugins
+
+    apm install \
+        editorconfig
+
 ### Neovim
 
     sudo add-apt-repository ppa:neovim-ppa/unstable
