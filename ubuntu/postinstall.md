@@ -90,6 +90,14 @@ Terminal multiplexer
 Text editor
 -----------
 
+### Atom
+
+    sudo add-apt-repository ppa:webupd8team/atom
+    sudo apt-get update
+    sudo apt-get install atom
+
+Source: http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html
+
 ### Neovim
 
     sudo add-apt-repository ppa:neovim-ppa/unstable
@@ -103,22 +111,6 @@ Python modules
     pip3 install --user neovim
 
 Source: <https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu>
-
-### Sublime text 3
-
-    sudo add-apt-repository ppa:webupd8team/sublime-text-3
-    sudo apt-get update
-    sudo apt-get install sublime-text-installer
-
-Source: http://www.webupd8.org/2013/07/sublime-text-3-ubuntu-ppa-now-available.html
-
-### Atom
-
-    sudo add-apt-repository ppa:webupd8team/atom
-    sudo apt-get update
-    sudo apt-get install atom
-
-Source: http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html
 
 File manager
 ------------
