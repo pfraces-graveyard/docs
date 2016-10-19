@@ -27,6 +27,7 @@ Install utilities
         meld \
         xclip \
         gpick \
+        vim-nox-py2 \
         mousepad
 
 ### Synaptic
