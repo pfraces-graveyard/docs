@@ -76,6 +76,30 @@ Source: https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-re
 
 Source: http://stackoverflow.com/a/13781363/1815446
 
+### Amazon S3 file system
+
+    sudo apt-get install \
+        libcurl4-gnutls-dev libfuse-dev libssl-dev libxml2-dev \
+        automake autotools-dev g++ git make pkg-config
+    
+    git clone https://github.com/s3fs-fuse/s3fs-fuse.git
+    cd s3fs-fuse
+    
+    ./autogen.sh
+    ./configure
+    make
+    sudo make install
+
+Enter your S3 identity and credential in a file `/path/to/passwd`
+
+    echo <MY_IDENTITY>:<MY_CREDENTIAL> > /path/to/passwd
+    chmod 600 /path/to/passwd
+
+Run s3fs with an existing bucket `mymbucket` and directory `/path/to/mountpoint`
+
+    mkdir /path/to/mountpoint
+    s3fs mybucket /path/to/mountpoint -o passwd_file=/path/to/passwd
+
 Terminal multiplexer
 --------------------
 
