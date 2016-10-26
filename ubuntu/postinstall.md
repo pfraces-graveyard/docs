@@ -125,7 +125,8 @@ Source: http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-pp
 #### Install plugins
 
     apm install \
-        editorconfig
+        editorconfig \
+        language-viml
 
 ### Neovim
 
