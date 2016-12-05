@@ -1,5 +1,5 @@
-JavaScript styleguide
-=====================
+JavaScript coding styleguide
+============================
 
 Must Have
 ---------
