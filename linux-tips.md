@@ -106,3 +106,9 @@ ISO to USB
 ----------
 
     sudo dd bs=4M if=/path/to/file.iso of=/dev/sd{x} && sync
+
+Change files and directories permissions recursively
+----------------------------------------------------
+
+    sudo find /path/to/base/dir -type d -exec chmod 775 '{}' \;
+    sudo find /path/to/base/dir -type f -exec chmod 664 '{}' \;
