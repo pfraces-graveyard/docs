@@ -114,6 +114,20 @@ Terminal multiplexer
 Text editor
 -----------
 
+### Neovim
+
+    sudo add-apt-repository ppa:neovim-ppa/unstable
+    sudo apt-get update
+    sudo apt-get install neovim
+    
+Python modules
+
+    sudo apt-get install python-dev python-pip python3-dev python3-pip
+    pip install --user neovim
+    pip3 install --user neovim
+
+Source: <https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu>
+
 ### Atom
 
     sudo add-apt-repository ppa:webupd8team/atom
@@ -128,19 +142,18 @@ Source: http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-pp
         editorconfig \
         language-viml
 
-### Neovim
+### Visual Studio Code
 
-    sudo add-apt-repository ppa:neovim-ppa/unstable
-    sudo apt-get update
-    sudo apt-get install neovim
-    
-Python modules
+Install `ubuntu-make`
 
-    sudo apt-get install python-dev python-pip python3-dev python3-pip
-    pip install --user neovim
-    pip3 install --user neovim
+    sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+    sudo apt-get update && sudo apt-get install ubuntu-make
 
-Source: <https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu>
+Install VSCode using `ubuntu-make`
+
+    umake web visual-studio-code
+
+Source: <http://www.omgubuntu.co.uk/2015/05/how-to-install-microsoft-visual-studio-code-in-ubuntu>
 
 File manager
 ------------
