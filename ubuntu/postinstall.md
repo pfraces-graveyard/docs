@@ -58,10 +58,10 @@ Source: http://askubuntu.com/a/68023
 
 ### NodeJS
 
-    curl -sL https://deb.nodesource.com/setup_4.x | sudo bash -
-    sudo apt-get install nodejs
+    curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+    sudo apt-get install -y nodejs
 
-Source: https://nodesource.com/blog/nodejs-v012-iojs-and-the-nodesource-linux-repositories
+Source: <https://github.com/nodesource/distributions#installation-instructions>
 
 ### Z
 
