@@ -74,7 +74,24 @@ Source: <https://github.com/nodesource/distributions#installation-instructions>
     sudo apt-get install python-pip
     sudo pip install grip
 
-Source: http://stackoverflow.com/a/13781363/1815446
+Source: <http://stackoverflow.com/a/13781363/1815446>
+
+### Docker
+
+    sudo apt-get install \
+        linux-image-extra-$(uname -r) \
+        linux-image-extra-virtual \
+        apt-transport-https \
+        ca-certificates \
+        curl \
+        software-properties-common
+
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+    sudo apt-get update
+    sudo apt-get install docker-ce
+
+Source: <https://docs.docker.com/engine/installation/linux/ubuntu/>
 
 ### Amazon S3 file system
 
@@ -134,7 +151,7 @@ Source: <https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu>
     sudo apt-get update
     sudo apt-get install atom
 
-Source: http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html
+Source: <http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html>
 
 #### Install plugins
 
