@@ -7,11 +7,9 @@ Package manager
 <https://chocolatey.org/>
 
 ```
-choco install git
-choco install meld
-choco install nodejs
-choco install notepadplusplus
-choco install 7zip
+choco install git meld nodejs yarn
+choco install [notepadplusplus atom visualstudiocode lighttable brackets]
+choco install 7zip adobereader teamviewer skype libreoffice
 ```
 
 Terminal emulator
