@@ -42,8 +42,8 @@ Git config
 ```
 
 **$HOME/.gitignore**
+
+```
 # vim swap files
 *.swp
-```
-
 ```
