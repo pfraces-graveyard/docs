@@ -32,4 +32,18 @@ Git config
     path = C:\\Program Files (x86)\\Meld\\Meld.exe
 [mergetool]
     keepBackup = false
+[credential]
+    helper = manager
+    modalPrompt = false
+[core]
+    askPass = ""
+    longpaths = true
+    excludesfile = ~/.gitignore
+```
+
+**$HOME/.gitignore**
+# vim swap files
+*.swp
+```
+
 ```
