@@ -25,6 +25,12 @@ Terminal emulator
 
 Use `git-bash` which comes with git package
 
+**$HOME/.bash_profile**
+
+```sh
+source $HOME/.bashrc
+```
+
 **$HOME/.bashrc**
 
 ```sh
