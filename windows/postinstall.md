@@ -6,6 +6,14 @@ Package manager
 
 <https://chocolatey.org/>
 
+### Installation
+
+From PowerShell with administrative rights
+
+```ps
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+
 ### Config
 
 ```
