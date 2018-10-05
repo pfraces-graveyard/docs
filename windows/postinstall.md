@@ -6,8 +6,16 @@ Package manager
 
 <https://chocolatey.org/>
 
+### Config
+
 ```
-choco install git meld nodejs yarn
+choco feature enable -n allowGlobalConfirmation
+```
+
+### Install packages
+
+```
+choco install git meld nodejs
 choco install notepadplusplus visualstudiocode
 choco install 7zip adobereader teamviewer skype libreoffice
 ```
