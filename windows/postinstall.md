@@ -83,3 +83,12 @@ NPM completion
 ```sh
 npm completion > $HOME/.bashrc.npm
 ```
+
+z
+-
+
+```sh
+mkdir $HOME/build
+cd $HOME/build
+git clone https://github.com/rupa/z
+```
