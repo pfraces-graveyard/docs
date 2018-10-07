@@ -25,6 +25,7 @@ choco feature enable -n allowGlobalConfirmation
 ```
 choco install git meld nodejs
 choco install notepadplusplus visualstudiocode
+choco install rosaimagewriter docker-for-windows
 choco install 7zip adobereader teamviewer skype libreoffice
 ```
 
