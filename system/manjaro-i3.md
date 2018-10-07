@@ -1,6 +1,15 @@
 Manjaro i3
 ==========
 
+Config
+------
+
+### Enable NTP (autofix datetime)
+
+```sh
+sudo timedatectl set-ntp true
+```
+
 Package Manager
 ---------------
 
@@ -51,6 +60,6 @@ JavaScript Development
 ----------------------
 
 ```sh
-yay -S nodejs visual-studio-code-bin
+yay -S nodejs npm visual-studio-code-bin
 yay -S docker docker-compose
 ```
