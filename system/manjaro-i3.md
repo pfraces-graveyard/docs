@@ -1,5 +1,5 @@
-Archlinux postinstall
-=====================
+Manjaro i3
+==========
 
 Utilities
 
@@ -27,14 +27,10 @@ Fonts
 i3
 
     sudo packer -S --noconfirm \
-        i3-wm \
-        i3status \
-        dmenu \
         slock \
         scrot \
         ranger \
         xclip \
-        xorg-xkill \
         htop
 
 Chromium
