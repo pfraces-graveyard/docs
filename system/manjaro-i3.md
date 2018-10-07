@@ -15,10 +15,9 @@ makepkg -si
 ### Install packages
 
 ```sh
-yay -S tmux z-git the_silver_searcher
+yay -S tmux z-git the_silver_searcher xclip
 yay -S downgrade bash-completion
 yay -S numlockx
-yay -S scrot xclip
 ```
 
 **Fonts**
@@ -45,5 +44,13 @@ Web Browser
 **Chromium**
 
 ```sh
-yay -S chromium chromium-pepper-flash
+yay -S chromium
+```
+
+JavaScript Development
+----------------------
+
+```sh
+yay -S nodejs visual-studio-code-bin
+yay -S docker docker-compose
 ```
