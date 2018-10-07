@@ -1,47 +1,49 @@
 Manjaro i3
 ==========
 
-Utilities
+Package Manager
+---------------
 
-    sudo packer -S --noconfirm \
-        git \
-        st \
-        tmux \
-        vim \
-        bash-completion \
-        downgrade \
-        z-git \
-        the_silver_searcher \
-        numlockx \
-        curl
+**yay**
 
-Fonts
+```sh
+git clone https://aur.archlinux.org/yay $HOME/build/yay
+cd $HOME/build/yay
+makepkg -si
+```
 
-    sudo packer -S --noconfirm \
-        terminus-font \
-        ttf-inconsolata \
-        ttf-freefont \
-        ttf-arphic-uming \
-        ttf-baekmuk
-        
-i3
+### Install packages
 
-    sudo packer -S --noconfirm \
-        slock \
-        scrot \
-        ranger \
-        xclip \
-        htop
+```sh
+yay -S tmux z-git the_silver_searcher
+yay -S downgrade bash-completion
+yay -S numlockx
+yay -S scrot xclip
+```
 
-Chromium
+**Fonts**
 
-    sudo packer -S --noconfirm  \
-        chromium \
-        chromium-pepper-flash
+```sh
+yay -S ttf-freefont
+yay -S ttf-arphic-uming ttf-baekmuk
+yay -S terminus-font ttf-inconsolata
+```
 
-Chormium Extensions
+Terminal
+--------
 
-*   Adblock Plus
-*   Postman
-*   Web Developer Form Filler
-*   Webpage Screenshot
+**$HOME/.bashrc**
+
+```sh
+# z
+source /usr/lib/z.sh 
+```
+
+Web Browser
+-----------
+
+**Chromium**
+
+```sh
+yay -S chromium chromium-pepper-flash
+```
