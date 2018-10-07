@@ -1,5 +1,5 @@
-Windows Postinstall
-===================
+Windows
+=======
 
 Package manager
 ---------------
