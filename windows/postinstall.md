@@ -23,10 +23,9 @@ choco feature enable -n allowGlobalConfirmation
 ### Install packages
 
 ```
-choco install git meld nodejs
+choco install git meld nodejs docker-for-windows
 choco install notepadplusplus visualstudiocode
-choco install rosaimagewriter docker-for-windows
-choco install 7zip adobereader teamviewer skype libreoffice
+choco install rufus 7zip adobereader teamviewer skype libreoffice
 ```
 
 Terminal emulator
