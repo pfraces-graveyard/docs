@@ -1,5 +1,5 @@
-Ubuntu (16.04) Postinstall
-===========================
+Ubuntu Mate
+===========
 
 System upgrade
 --------------
@@ -7,15 +7,6 @@ System upgrade
     sudo apt-get update
     sudo apt-get upgrade
     sudo apt-get autoremove
-
-Desktop Environment
--------------------
-
-There are specific documentation for tested desktop environments
-
-  * [Unity](unity.md)
-  * [i3](i3.md)
-  * [Mate](mate.md)
 
 Install utilities
 -----------------
@@ -93,36 +84,8 @@ Source: <http://stackoverflow.com/a/13781363/1815446>
 
 Source: <https://docs.docker.com/engine/installation/linux/ubuntu/>
 
-### Amazon S3 file system
-
-    sudo apt-get install \
-        libcurl4-gnutls-dev libfuse-dev libssl-dev libxml2-dev \
-        automake autotools-dev g++ git make pkg-config
-    
-    git clone https://github.com/s3fs-fuse/s3fs-fuse.git
-    cd s3fs-fuse
-    
-    ./autogen.sh
-    ./configure
-    make
-    sudo make install
-
-Enter your S3 identity and credential in a file `/path/to/passwd`
-
-    echo <MY_IDENTITY>:<MY_CREDENTIAL> > /path/to/passwd
-    chmod 600 /path/to/passwd
-
-Run s3fs with an existing bucket `mymbucket` and directory `/path/to/mountpoint`
-
-    mkdir /path/to/mountpoint
-    s3fs mybucket /path/to/mountpoint -o passwd_file=/path/to/passwd
-
 Terminal multiplexer
 --------------------
-
-### St
-
-    sudo apt-get install stterm tmux
 
 ### Terminator
 
@@ -130,34 +93,6 @@ Terminal multiplexer
 
 Text editor
 -----------
-
-### Neovim
-
-    sudo add-apt-repository ppa:neovim-ppa/unstable
-    sudo apt-get update
-    sudo apt-get install neovim
-    
-Python modules
-
-    sudo apt-get install python-dev python-pip python3-dev python3-pip
-    pip install --user neovim
-    pip3 install --user neovim
-
-Source: <https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu>
-
-### Atom
-
-    sudo add-apt-repository ppa:webupd8team/atom
-    sudo apt-get update
-    sudo apt-get install atom
-
-Source: <http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html>
-
-#### Install plugins
-
-    apm install \
-        editorconfig \
-        language-viml
 
 ### Visual Studio Code
 
@@ -174,10 +109,6 @@ Source: <http://www.omgubuntu.co.uk/2015/05/how-to-install-microsoft-visual-stud
 
 File manager
 ------------
-
-### Nautilus
-
-It comes with the Unity desktop environment by default
 
 ### Thunar
 
