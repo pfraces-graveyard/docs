@@ -23,8 +23,9 @@ choco feature enable -n allowGlobalConfirmation
 ### Install packages
 
 ```
-choco install git meld nodejs docker-for-windows
-choco install notepadplusplus visualstudiocode
+choco install git git-credential-manager-for-windows meld
+choco install docker-for-windows docker-compose
+choco install nodejs visualstudiocode
 choco install rufus 7zip adobereader teamviewer skype libreoffice
 ```
 
