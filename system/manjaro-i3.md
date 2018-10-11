@@ -1,15 +1,6 @@
 Manjaro i3
 ==========
 
-Config
-------
-
-### Enable NTP (autofix datetime)
-
-```sh
-sudo timedatectl set-ntp true
-```
-
 Install packages
 ----------------
 
@@ -61,7 +52,13 @@ yay -S docker docker-compose
 Config
 ------
 
-### Terminal
+### NTP (fixes date and time)
+
+```sh
+sudo timedatectl set-ntp true
+```
+
+### Z
 
 **$HOME/.bashrc**
 
