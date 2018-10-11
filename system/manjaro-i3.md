@@ -10,8 +10,10 @@ Config
 sudo timedatectl set-ntp true
 ```
 
-Package Manager
----------------
+Install packages
+----------------
+
+### Package Manager
 
 **yay**
 
@@ -21,15 +23,13 @@ cd $HOME/build/yay
 makepkg -si
 ```
 
-### Install packages
+### Bash helpers
 
 ```sh
-yay -S tmux z-git the_silver_searcher xclip
-yay -S downgrade bash-completion
-yay -S numlockx
+yay -S tmux bash-completion z-git the_silver_searcher xclip
 ```
 
-**Fonts**
+### Fonts
 
 ```sh
 yay -S ttf-freefont
@@ -37,18 +37,13 @@ yay -S ttf-arphic-uming ttf-baekmuk
 yay -S terminus-font ttf-inconsolata
 ```
 
-Terminal
---------
+### Error proof
 
-**$HOME/.bashrc**
-
-```sh
-# z
-source /usr/lib/z.sh 
+```
+yay -S downgrade numlockx
 ```
 
-Web Browser
------------
+### Web Browser
 
 **Chromium**
 
@@ -56,10 +51,21 @@ Web Browser
 yay -S chromium
 ```
 
-JavaScript Development
-----------------------
+### JavaScript Development
 
 ```sh
 yay -S nodejs npm visual-studio-code-bin
 yay -S docker docker-compose
+```
+
+Config
+------
+
+### Terminal
+
+**$HOME/.bashrc**
+
+```sh
+# z
+source /usr/lib/z.sh 
 ```
