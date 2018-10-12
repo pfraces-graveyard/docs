@@ -66,3 +66,10 @@ sudo timedatectl set-ntp true
 # z
 source /usr/lib/z.sh 
 ```
+
+### Visual Studio Code
+
+**Extensions:**
+
+  * EditorConfig
+  * GitLens
