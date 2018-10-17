@@ -26,7 +26,8 @@ choco feature enable -n allowGlobalConfirmation
 choco install git git-credential-manager-for-windows meld
 choco install docker-for-windows docker-compose
 choco install nodejs visualstudiocode
-choco install rufus 7zip adobereader teamviewer skype libreoffice
+choco install putty 7zip rufus
+choco install adobereader teamviewer skype libreoffice
 ```
 
 Terminal emulator
